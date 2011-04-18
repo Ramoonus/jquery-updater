@@ -1,9 +1,9 @@
 <?php
 /*
-Plugin Name: jQuery and jQuery UI updates
-Plugin URI: http://www.ramoonus.nl
-Description: Title says all
-Version: 1..0.0
+Plugin Name: jQuery and jQuery UI updater
+Plugin URI: http://www.ramoonus.nl/wordpress/jquery-updater/
+Description: This plugin should only be used for development purposes, this plugin updates jQuery and jQuery UI to the latest stable version.
+Version: 1.0.0
 Author: Ramoonus
 Author URI: http://www.ramoonus.nl
 License: GPL2

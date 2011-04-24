@@ -4,7 +4,7 @@ Donate link: http://www.ramoonus.nl
 Tags: jquery
 Requires at least: 3.0.0
 Tested up to: 3.2
-Stable tag: 1.1.0
+Stable tag: 1.1.1
 
 This plugin should only be used for development purposes, this plugin updates jQuery to the latest (stable) version.
 
@@ -25,6 +25,9 @@ Its recommended to flush the cache after upgrading.
 Not relevant.
 
 == Changelog ==
+= 1.1.1 =
+* Loads the javascript from the plugin directory instead of googles server. 
+
 = 1.1.0 =
 * Added jQuery 1.5.2.min to the javascript directory
 * Removed jQuery UI to a seperate plugin

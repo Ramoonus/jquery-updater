@@ -4,13 +4,12 @@ Donate link: http://www.ramoonus.nl
 Tags: jquery
 Requires at least: 3.0.0
 Tested up to: 3.2
-Stable tag: 1.0.1
+Stable tag: 1.1.2
 
-This plugin should only be used for development purposes, this plugin updates jQuery and jQuery UI to the latest stable version.
+This plugin should only be used for development purposes, this plugin updates jQuery to the latest (stable) version.
 
 == Description ==
-
-This plugin should only be used for development purposes, this plugin updates jQuery and jQuery UI to the latest stable version.
+This plugin should only be used for development purposes, this plugin updates jQuery to the latest (stable) version.
 
 == Installation ==
 1. Upload `jquery-updater.php` to the `/wp-content/plugins/` directory
@@ -26,13 +25,19 @@ Its recommended to flush the cache after upgrading.
 Not relevant.
 
 == Changelog ==
-= 1.1 =
+= 1.1.2 =
+* jQuery 1.6.0
+
+= 1.1.1 =
+* Loads the javascript from the plugin directory instead of googles server. 
+
+= 1.1.0 =
 * Added jQuery 1.5.2.min to the javascript directory
-* Added jQuery UI 1.8.11 to the javascritp directory
-* Fixed version 1..0 (should be 1.0)
+* Removed jQuery UI to a seperate plugin
 
 = 1.0.1 =
 * Updated jQuery UI to 1.8.12 (on Googles CDN)
+* Fixed version 1..0 (should be 1.0)
 
 = 1.0 =
 * First version, uses jQuery 1.5.2 on Googles CDN

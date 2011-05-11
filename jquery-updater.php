@@ -21,4 +21,7 @@ function rw_jquery_update() {
 }
 // load
 add_action('init', 'rw_jquery_update');
+
+// noconflict code
+// @since 1.6.0
 ?>

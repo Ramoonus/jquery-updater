@@ -4,7 +4,7 @@ Donate link: http://www.ramoonus.nl
 Tags: jquery
 Requires at least: 3.0.0
 Tested up to: 3.2
-Stable tag: 1.6.0
+Stable tag: 1.6.0.1
 
 This plugin should only be used for development purposes, this plugin updates jQuery to the latest (stable) version.
 

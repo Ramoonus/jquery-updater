@@ -25,6 +25,9 @@ Its recommended to flush the cache after upgrading.
 Not relevant.
 
 == Changelog ==
+= 1.6.0.1 =
+* jQuery 1.6.1 rc 1 (fixes a known WP bug untill 3.2 is released)
+
 = 1.6.0 = 
 * Equals 1.1.2 but has the same number as jQuery 
 

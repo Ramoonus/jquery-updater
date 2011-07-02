@@ -3,8 +3,8 @@ Contributors: ramoonus
 Donate link: http://www.ramoonus.nl
 Tags: jquery
 Requires at least: 3.0.0
-Tested up to: 3.2
-Stable tag: 1.6.1.1.1
+Tested up to: 3.2.0
+Stable tag: 1.6.2
 
 This plugin should only be used for development purposes, this plugin updates jQuery to the latest (stable) version.
 
@@ -25,6 +25,9 @@ Its recommended to flush the cache after upgrading.
 Not relevant.
 
 == Changelog ==
+= 1.6.2 =
+* Updated jQuery to 1.6.2 (minified)
+
 = 1.6.1.1.1 =
 * Promise: less numbers when 1.6.2 comes out
 * Updated jQuery to 1.6.2 rc 1 (

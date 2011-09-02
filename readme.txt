@@ -4,7 +4,7 @@ Donate link: http://www.ramoonus.nl
 Tags: jquery
 Requires at least: 3.0.0
 Tested up to: 3.2.1
-Stable tag: 1.6.2.1
+Stable tag: 1.6.3
 
 This plugin should only be used for development purposes, this plugin updates jQuery to the latest (stable) version.
 
@@ -25,6 +25,9 @@ Its recommended to flush the cache after upgrading.
 Not relevant.
 
 == Changelog ==
+= 1.6.3 =
+* Updated jQuery to 1.6.3
+
 = 1.6.2.1 =
 * Updated jQuery to 1.6.3 rc 1 (minified)
 

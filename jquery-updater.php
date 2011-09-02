@@ -15,7 +15,7 @@ function rw_jquery_update() {
 	if (!is_admin()) { // when not in admin screen
 		wp_deregister_script('jquery'); // deregister
 		// wp_register_script( $handle, $src, $deps, $ver, $in_footer );
-		wp_register_script('jquery', plugins_url('/js/jquery-1.6.3rc1.min.js', __FILE__), false, '1.6.2.1');
+		wp_register_script('jquery', plugins_url('/js/jquery-1.6.3.min.js', __FILE__), false, '1.6.3');
 		wp_enqueue_script('jquery'); // load
 	}
 }

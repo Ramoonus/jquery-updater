@@ -1,5 +1,5 @@
 === Plugin Name ===
-Contributors: ramoonus
+Contributors: Ramoonus
 Donate link: http://www.ramoonus.nl
 Tags: jquery
 Requires at least: 3.0.0

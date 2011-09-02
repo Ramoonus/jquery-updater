@@ -3,7 +3,7 @@
 Plugin Name: jQuery updater
 Plugin URI: http://www.ramoonus.nl/wordpress/jquery-updater/
 Description: This plugin updates jQuery to the latest (stable) version.
-Version: 1.6.2.1
+Version: 1.6.3
 Author: Ramoonus
 Author URI: http://www.ramoonus.nl/
 License: GPL2

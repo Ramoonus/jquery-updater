@@ -8,15 +8,15 @@ Author: Ramoonus
 Author URI: http://www.ramoonus.nl/
 License: GPL2
 */
-?>
-<?php
+
 // Update jQuery
 function rw_jquery_update() {
-	//if (!is_admin()) { // when not in admin screen
-		wp_deregister_script('jquery'); // deregister
-		// wp_register_script( $handle, $src, $deps, $ver, $in_footer );
-		wp_enqueue_script('jquery', plugins_url('/js/jquery-1.7.min.min.js', __FILE__), false, '1.7');
-	//}
+		// deregister wordpress` jQuery
+		wp_deregister_script('jquery'); 
+		// register new jQuery and load it
+		wp_enqueue_script('jquery', plugins_url('/js/jquery-1.7.min.js', __FILE__), false, '1.7');
+		
+		//return;
 }
 // load
 add_action('init', 'rw_jquery_update');

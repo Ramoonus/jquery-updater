@@ -11,7 +11,7 @@ This plugin should only be used for development purposes, this plugin updates jQ
 == Description ==
 This plugin should only be used for development purposes, this plugin updates jQuery to the latest (stable) version.
 
-For moe information visit [jquery.com](http://jquery.com)
+For more information visit [jquery.com](http://jquery.com)
 
 == Installation ==
 1. Upload `jquery-updater/` to the `/wp-content/plugins/` directory
@@ -29,7 +29,8 @@ Not relevant.
 == Changelog ==
 = 1.7.0 =
 * Updated jQuery to 1.7 [releasenotes](http://blog.jquery.com/2011/11/03/jquery-1-7-released/) 
-* Readme fix
+* Readme update
+* Minor code optimalisation
 
 = 1.6.4 =
 * Updated jQuery to 1.6.4 [releasenotes](http://blog.jquery.com/2011/09/12/jquery-1-6-4-released/)

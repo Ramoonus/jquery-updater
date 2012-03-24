@@ -3,8 +3,8 @@ Contributors: Ramoonus
 Donate link: http://www.ramoonus.nl
 Tags: jquery, 
 Requires at least: 3.0
-Tested up to: 3.3
-Stable tag: 1.7.1
+Tested up to: 3.3.1
+Stable tag: 1.7.2
 
 This plugin should only be used for development purposes, this plugin updates jQuery to the latest (stable) version.
 
@@ -21,12 +21,17 @@ For more information visit [jquery.com](http://jquery.com)
 None at this moment.
 
 == Upgrade Notice == 
-Its recommended to flush the cache after upgrading.
+= 1.7.2 = 
+* Updated jQuery to 1.7.2
 
 == Screenshots ==
 Not relevant.
 
 == Changelog ==
+= 1.7.2 = 
+* Updated jQuery to 1.7.2
+* Readme fix
+
 = 1.7.1 =
 * Updated jQuery to 1.7.1 [releasenotes](http://blog.jquery.com/2011/11/21/jquery-1-7-1-released/) 
 * Minor code optimalisation 

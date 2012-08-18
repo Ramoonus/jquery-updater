@@ -1,10 +1,10 @@
 === Plugin Name ===
 Contributors: Ramoonus
 Donate link: http://www.ramoonus.nl
-Tags: jquery, 
+Tags: jquery, update, jquery ui, javascript
 Requires at least: 3.0
-Tested up to: 3.3.1
-Stable tag: 1.7.2
+Tested up to: 3.4
+Stable tag: 1.8.0
 
 This plugin should only be used for development purposes, this plugin updates jQuery to the latest (stable) version.
 
@@ -28,6 +28,9 @@ None at this moment.
 Not relevant.
 
 == Changelog ==
+= 1.8.0 = 
+* Updated jQuery to 1.8.0  [releasenotes](http://blog.jquery.com/2012/08/09/jquery-1-8-released/) 
+
 = 1.7.2 = 
 * Updated jQuery to 1.7.2
 * Readme fix

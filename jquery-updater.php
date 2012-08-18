@@ -11,7 +11,7 @@ License: GPL2
 
 function rw_jquery_update() {
 		wp_deregister_script('jquery'); 
-		wp_enqueue_script('jquery', plugins_url('/js/jquery-1.7.2.min.js', __FILE__), false, '1.7.2');	
+		wp_enqueue_script('jquery', plugins_url('/js/jquery-1.8.0.min.js', __FILE__), false, '1.7.2');	
 }
 add_action('init', 'rw_jquery_update');
 

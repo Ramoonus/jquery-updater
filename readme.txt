@@ -1,17 +1,19 @@
 === Plugin Name ===
 Contributors: Ramoonus
-Donate link: http://www.ramoonus.nl
-Tags: jquery, update, jquery ui, javascript
+Donate link: http://www.ramoonus.nl/donate/
+Tags: jquery, update, jquery ui, javascript, jq
 Requires at least: 3.0
-Tested up to: 3.4
-Stable tag: 1.8.0
+Tested up to: 3.5
+Stable tag: 1.8.2
 
-This plugin should only be used for development purposes, this plugin updates jQuery to the latest (stable) version.
+This plugin updates jQuery to the latest stable version on your website.
 
 == Description ==
-This plugin should only be used for development purposes, this plugin updates jQuery to the latest (stable) version.
+This plugin updates jQuery to the latest stable version on your website.
 
-For more information visit [jquery.com](http://jquery.com)
+For more about jQuery information visit [jquery.com](http://jquery.com)
+
+This plugin also registers the shortcodes [jquery] and [jq] for easier embedding jQuery code on a page or post.
 
 == Installation ==
 1. Upload `jquery-updater/` to the `/wp-content/plugins/` directory
@@ -21,6 +23,12 @@ For more information visit [jquery.com](http://jquery.com)
 None at this moment.
 
 == Upgrade Notice == 
+= 1.8.2 = 
+* Updated jQuery to 1.8.2
+
+= 1.8.0 = 
+* Updated jQuery to 1.8.0
+
 = 1.7.2 = 
 * Updated jQuery to 1.7.2
 
@@ -28,6 +36,11 @@ None at this moment.
 Not relevant.
 
 == Changelog ==
+= 1.8.2 = 
+* Updated jQuery to 1.8.2
+* Fixed a bug in the Dashboard
+* Minor code improvement
+
 = 1.8.0 = 
 * Updated jQuery to 1.8.0  [releasenotes](http://blog.jquery.com/2012/08/09/jquery-1-8-released/) 
 

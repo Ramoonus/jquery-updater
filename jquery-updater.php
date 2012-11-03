@@ -23,6 +23,6 @@ function rw_jquery_shortcode( $atts, $content = null ) {
    . $content . 
    ' }); </script>';
 }
-add_shortcode( 'jquery', 'rw_jquery_shortcode' ); // [jquery]
-add_shortcode( 'jq', 'rw_jquery_shortcode' ); // [jq]
+//add_shortcode( 'jquery', 'rw_jquery_shortcode' ); // [jquery]
+//add_shortcode( 'jq', 'rw_jquery_shortcode' ); // [jq]
 ?>

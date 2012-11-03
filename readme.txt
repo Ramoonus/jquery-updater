@@ -13,8 +13,6 @@ This plugin updates jQuery to the latest stable version on your website.
 
 For more about jQuery information visit [jquery.com](http://jquery.com)
 
-This plugin also registers the shortcodes [jquery] and [jq] for easier embedding jQuery code on a page or post.
-
 == Installation ==
 1. Upload `jquery-updater/` to the `/wp-content/plugins/` directory
 2. Activate the plugin through the 'Plugins' menu in WordPress

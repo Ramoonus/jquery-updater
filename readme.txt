@@ -1,10 +1,10 @@
-=== Plugin Name ===
+=== jQuery Updater ===
 Contributors: Ramoonus
 Donate link: http://www.ramoonus.nl/donate/
 Tags: jquery, update, jquery ui, javascript, jq
 Requires at least: 3.0
 Tested up to: 3.5
-Stable tag: 1.8.2
+Stable tag: 1.9.0
 
 This plugin updates jQuery to the latest stable version on your website.
 
@@ -21,9 +21,6 @@ For more about jQuery information visit [jquery.com](http://jquery.com)
 None at this moment.
 
 == Upgrade Notice == 
-= 1.8.2 = 
-* Updated jQuery to 1.8.2
-
 = 1.8.0 = 
 * Updated jQuery to 1.8.0
 
@@ -34,6 +31,13 @@ None at this moment.
 Not relevant.
 
 == Changelog ==
+= 1.9.0 = 
+* Updated jQuery to 1.9.0
+
+= 1.8.3 = 
+* Updated jQuery to 1.8.3
+* Improved code styling and documentation
+
 = 1.8.2 = 
 * Updated jQuery to 1.8.2
 * Fixed a bug in the Dashboard

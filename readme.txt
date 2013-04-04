@@ -4,7 +4,7 @@ Donate link: http://www.ramoonus.nl/donate/
 Tags: jquery, update, jquery ui, javascript, jq
 Requires at least: 3.0
 Tested up to: 3.5
-Stable tag: 1.8.3
+Stable tag: 1.9.0
 
 This plugin updates jQuery to the latest stable version on your website.
 
@@ -31,6 +31,9 @@ None at this moment.
 Not relevant.
 
 == Changelog ==
+= 1.9.0 = 
+* Updated jQuery to 1.9.0
+
 = 1.8.3 = 
 * Updated jQuery to 1.8.3
 * Improved code styling and documentation

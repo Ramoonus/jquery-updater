@@ -4,7 +4,7 @@ Donate link: http://www.ramoonus.nl/donate/
 Tags: jquery, update, jquery ui, javascript, jq
 Requires at least: 3.0
 Tested up to: 3.5
-Stable tag: 2.0.0
+Stable tag: 2.0.0.1
 
 This plugin updates jQuery to the latest stable version on your website.
 
@@ -34,7 +34,12 @@ None at this moment.
 Not relevant.
 
 == Changelog ==
+= 2.0.0.1 =
+* Added jquery-migrate-1.1.1.min.js
+
 = 2.0.0 = 
+jQuery 2.0 has the same API as jQuery 1.9, but does not support Internet Explorer 6, 7, or 8. All the notes in the jQuery 1.9 Upgrade Guide apply here as well. Since IE 6/7/8 are still relatively common, we recommend using the 1.x version unless you are certain no IE 6/7/8 users are visiting the site.
+
 * Updated jQuery to 2.0.0 [releasenotes](http://blog.jquery.com/2013/04/18/jquery-2-0-released/) 
 
 = 1.9.1 = 

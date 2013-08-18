@@ -3,8 +3,8 @@ Contributors: Ramoonus
 Donate link: http://www.ramoonus.nl/donate/
 Tags: jquery, update, jquery ui, javascript, jq
 Requires at least: 3.0
-Tested up to: 3.5
-Stable tag: 2.0.0.2
+Tested up to: 3.6
+Stable tag: 2.0.3
 
 This plugin updates jQuery to the latest stable version on your website.
 
@@ -13,29 +13,34 @@ This plugin updates jQuery to the latest stable version on your website.
 
 For more about jQuery information visit [jquery.com](http://jquery.com)
 
+
 == Installation ==
 1. Upload `jquery-updater/` to the `/wp-content/plugins/` directory
 2. Activate the plugin through the 'Plugins' menu in WordPress
+3. Sit back and enjoy
 
 == Frequently Asked Questions == 
-None at this moment.
+1. Q: Do I need this plugin if I`m running the latest version of WordPress on my site?
+A: possibly not
 
-== Upgrade Notice == 
-= 1.9.1 = 
-* Updated jQuery to 1.9.1
+2. Q: This plugin doesn`t seem to do anything?
+A: If you don`t know what you are doing, or what to expect from this plugin: read the readme
 
-= 1.8.0 = 
-* Updated jQuery to 1.8.0
+3. Q: This plugin breaks my site!
+A: Using jQuery version 2 could break your site.
 
-= 1.7.2 = 
-* Updated jQuery to 1.7.2
-
-== Screenshots ==
-Not relevant.
 
 == Changelog ==
+= 2.0.3 = 
+* Updated jQuery to 2.0.3
+* Updated [jQuery Migrate](http://github.com/jquery/jquery-migrate/) to 1.2.1
+* Improved documentation with FAQ and removed screenshots. (who wants to see screenshots of javascript?)
+* Added jQuery 1.x as fallback
+* Fallback: Updated jQuery to 1.10.2
+* Since WordPress  3.6 this plugin cannot break the dashboard.
+
 = 2.0.0.1 / 2.0.0.2 =
-* Added jquery-migrate-1.1.1.min.js
+* Added [jQuery Migrate](http://github.com/jquery/jquery-migrate/)
 
 = 2.0.0 = 
 jQuery 2.0 has the same API as jQuery 1.9, but does not support Internet Explorer 6, 7, or 8. All the notes in the jQuery 1.9 Upgrade Guide apply here as well. Since IE 6/7/8 are still relatively common, we recommend using the 1.x version unless you are certain no IE 6/7/8 users are visiting the site.
@@ -122,3 +127,19 @@ jQuery 2.0 has the same API as jQuery 1.9, but does not support Internet Explore
 
 = 1.0 =
 * First version, uses jQuery 1.5.2 on Googles CDN
+
+== Upgrade Notice == 
+= 2.0.3 =
+* Major core overhaul
+
+= 2.0.0 =
+* Updated jQuery to 2.0.0
+
+= 1.9.1 = 
+* Updated jQuery to 1.9.1
+
+= 1.8.0 = 
+* Updated jQuery to 1.8.0
+
+= 1.7.2 = 
+* Updated jQuery to 1.7.2

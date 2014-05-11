@@ -3,8 +3,8 @@ Contributors: Ramoonus
 Donate link: http://www.ramoonus.nl/donate/
 Tags: jquery, update, jquery ui, javascript, jq
 Requires at least: 3.0
-Tested up to: 3.8.1
-Stable tag: 2.1.0
+Tested up to: 3.9
+Stable tag: 2.1.1
 
 This plugin updates jQuery to the latest stable version on your website.
 
@@ -31,6 +31,9 @@ A: Using jQuery version 2 could break your site.
 
 
 == Changelog ==
+= 2.1.1 =
+* Updated jQuery to 2.1.1
+
 = 2.1.0 = 
 * Updated jQuery to 2.1.0
 
@@ -132,20 +135,5 @@ jQuery 2.0 has the same API as jQuery 1.9, but does not support Internet Explore
 * First version, uses jQuery 1.5.2 on Googles CDN
 
 == Upgrade Notice == 
-= 2.1.0 = 
-* Updated jQuery to 2.1.0
-
-= 2.0.3 =
-* Major core overhaul
-
-= 2.0.0 =
-* Updated jQuery to 2.0.0
-
-= 1.9.1 = 
-* Updated jQuery to 1.9.1
-
-= 1.8.0 = 
-* Updated jQuery to 1.8.0
-
-= 1.7.2 = 
-* Updated jQuery to 1.7.2
+= 2.1.1 = 
+* Updated jQuery to 2.1.1

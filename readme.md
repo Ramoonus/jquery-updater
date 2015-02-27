@@ -9,9 +9,3 @@ The development and issue tracker is located here
 
 ## Bug reports ##
 For bugs, issues and questions use the GitHub [issues](https://github.com/Ramoonus/jQuery-Updater/issues) page
-
-## Build Status ##
-[![Build Status](https://travis-ci.org/Ramoonus/jQuery-Updater.png?branch=master)](https://travis-ci.org/Ramoonus/jQuery-Updater)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/Ramoonus/jQuery-Updater/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/Ramoonus/jQuery-Updater/?branch=master)
-[![Code Coverage](https://scrutinizer-ci.com/g/Ramoonus/jQuery-Updater/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/Ramoonus/jQuery-Updater/?branch=master)
-[![Build Status](https://scrutinizer-ci.com/g/Ramoonus/jQuery-Updater/badges/build.png?b=master)](https://scrutinizer-ci.com/g/Ramoonus/jQuery-Updater/build-status/master)

@@ -1,39 +1,56 @@
 <?php
 /*
-Plugin Name: jQuery Updater
-Plugin URI: http://www.ramoonus.nl/wordpress/jquery-updater/
-Description: This plugin updates jQuery to the latest  stable version.
-Version: 2.1.3
-Author: Ramoonus
-Author URI: http://www.ramoonus.nl/
-License: GPL3
-*/
+ Plugin Name: jQuery Updater
+ Plugin URI: http://www.ramoonus.nl/wordpress/jquery-updater/
+ Description: This plugin updates jQuery to the latest  stable version.
+ Version: 2.1.4-beta
+ Author: Ramoonus
+ Author URI: http://www.ramoonus.nl/
+ Network: true
+ License: GPLv3
+ Text Domain: jquery-updater
+ Domain Path: /languages
+ GitHub Plugin URI: https://github.com/ramoonus/jQuery-Updater/
+ GitHub Branch: master
+ */
 
-// Enable Localisation
-load_plugin_textdomain('jquery_updater', false, basename( dirname( __FILE__ ) ) . '/languages' );
-
-// Register main function
-function rw_jquery_updater() {
-
-		// jQuery
-		// Deregister core jQuery
-		wp_deregister_script('jquery');
-	// Register
-		wp_enqueue_script('jquery', plugins_url('/js/jquery-2.1.3.min.js', __FILE__), false, '2.1.3');
-
-		// jQuery Migrate
-		// @since 2.0.0
-		// Deregister core jQuery Migrate
-		wp_deregister_script('jquery-migrate');
-		// Register
-		wp_enqueue_script('jquery-migrate', plugins_url('/js/jquery-migrate-1.2.1.min.js', __FILE__), array('jquery'), '1.2.1'); // require jquery, as loaded above	
+/**
+ * Security
+ * Exit if accessed directly.
+ * @since 2.1.4
+ */
+if (!defined('ABSPATH')) {
+    exit;
 }
-// Front-End
-add_action('wp_enqueue_scripts', 'rw_jquery_updater');
-// Back-End
-// @since 2.1.3
-//add_action('admin_enqueue_scripts', 'rw_jquery_updater');
-//add_action('login_enqueue_scripts', 'rw_jquery_updater');
 
+/**
+ * Init jQuery (old function)
+ * @return void
+ * @author Ramon "Ramoonus" van Belzen
+ * @version 2.1.4-beta
+ * @since 2.0
+ * @copyright 2015
+ */
+function jqu_init()
+{
+}
+add_action('init', 'jqu_init');
 
-// Admin Screen
+/**
+ * Load front or backend scripts
+ * @since 2.1.4
+ */
+if (is_admin()) {
+    /* Back End */
+    require_once(plugin_dir_path(__FILE__) . 'inc/db-updater.php');
+    require_once(plugin_dir_path(__FILE__) . 'inc/options.php');
+} else {
+    /* Front End */
+    require_once(plugin_dir_path(__FILE__) . 'inc/engine.php');
+}
+/**
+ * Always load compat and deprecated
+ * @since 2.1.4
+ */
+require_once(plugin_dir_path(__FILE__) . 'inc/compatibility.php');
+require_once(plugin_dir_path(__FILE__) . 'inc/deprecated.php');

@@ -11,6 +11,8 @@ This plugin updates jQuery to the latest stable version on your website.
 == Description ==
 This plugin updates jQuery to the latest stable version on your website.
 
+For bugs, issues and questions use the GitHub [issues](https://github.com/Ramoonus/jQuery-Updater/issues) page
+
 For more about jQuery information visit [jquery.com](http://jquery.com)
 
 == Installation ==

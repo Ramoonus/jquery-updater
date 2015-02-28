@@ -10,7 +10,8 @@
     "phpunit/phpunit" : ">=4.5.0",
     "phpdocumentor/phpdocumentor" : ">=2.8.00",
     "squizlabs/php_codesniffer" : ">=2.2.0",
-    "pdepend/pdepend" : ">=2.0.0"
+    "pdepend/pdepend" : ">=2.0.0",
+    "yoast/yoastcs" : "dev-master"
   },
   "authors" : [ {
     "name" : "Ramoonus",

@@ -1,49 +1,50 @@
 <?php
+
 /**
- * Contains the code to install and update the wp_options fields
- * @return boolean
- * @todo global var for version number
+ * Options Update and Installer
+ * 
+ * @version 2.1.4
  * @since 2.1.4
  */
-function jqu_db_outdated() {
-  if ( version_compare( get_option( 'jqu_db_version' ), '2.1.4', '<=' ) ) {
-    return true;
-  }
-  else {
-    return false; 
-  }
-}
-/**
- * If database is outdated, run update
- * @since 2.1.4
- */ 
-if ( jqu_db_outdated ) { 
-  jqu_db_update();
-}
 
 /**
- * Is database up to date?
- * @return boolean
- * @since 2.1.4
- */ 
-function jqu_db_up2date() {
-  if ( version_compare( get_option( 'jqu_db_version' ), '2.1.4', '<=' ) ) {
-    return true;
-  }
-}
-
-/**
- * On Install
- * @todo do something if no version option was detected
- */
-if ( !get_option( 'jqu_db_version' ) ) {
-  add_option( 'jqu_db_version', '2.1.4' );
-}
-
-/**
- * On Update
+ * Install
+ *
+ * @todo turn into array
  * @return void
+ * @since 2.1.4
+ * @version 2.1.4
  */
- function jqu_db_update() {
-   update_option( 'jqu_db_version', '2.1.4' );
- }
+function jqu_db_install()
+{
+    // If Version Number does not exists // Fresh Install
+    if (! get_option('jqu_db_version')) {
+        add_option('jqu_db_version', '2.1.4');
+        // Default options:
+        add_option('jqu_compat_blockui', 0); // No
+        add_option('jqu_shortcode', 0); // No
+        add_option('jqu_replace_jquery', 1); // Yes
+        add_option('jqu_replace_jquery_migrate', 1); // Yes
+        add_option('jqu_replace_jquery_admin', 0); // No
+        add_option('jqu_replace_jquery_login', 0); // No
+        add_option('jqu_replace_jquery_mobile', 0); // No
+        add_option('jqu_replace_jquery_ui', 0); // No
+        add_option('jqu_include_noconflict', 1); // Yes
+    }
+}
+
+/**
+ * Update
+ *
+ * @return void
+ * @since 2.1.4
+ * @version 2.1.4
+ */
+function jqu_db_update()
+{
+    if (version_compare(get_option('jqu_db_version'), '2.1.4', '<=')) {
+        // Update DB Version to 2.1.4
+        update_option('jqu_db_version', '2.1.4');
+    }
+}
+

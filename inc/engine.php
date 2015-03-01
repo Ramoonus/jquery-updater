@@ -85,9 +85,10 @@ if( get_option( 'jqu_replace_jquery_ui') ) {
  * @since 2.1.4
  * @return void
  */
-function jqu_jquery_conflict() {
+function jqu_jquery_noconflict() {
+    wp_enqueue_script('jquery-conflict', plugins_url('/js/noconflict.js', __FILE__), array('jquery'), '1.0');
 
 }
 if( get_option( 'jqu_include_noconflict') ) {
-    add_action('wp_enqueue_scripts', 'jqu_jquery_conflict');
+    add_action('wp_enqueue_scripts', 'jqu_jquery_noconflict');
 }

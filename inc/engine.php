@@ -79,3 +79,15 @@ function jqu_jquery_ui() {
 if( get_option( 'jqu_replace_jquery_ui') ) {
  add_action('wp_enqueue_scripts', 'jqu_jquery_ui');
 }
+
+/**
+ * jQuery Conflict
+ * @since 2.1.4
+ * @return void
+ */
+function jqu_jquery_conflict() {
+
+}
+if( get_option( 'jqu_include_noconflict') ) {
+    add_action('wp_enqueue_scripts', 'jqu_jquery_conflict');
+}

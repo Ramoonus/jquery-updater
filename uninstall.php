@@ -16,7 +16,8 @@ $options = array(
 	'jqu_replace_jquery_admin', 
 	'jqu_replace_jquery_login', 
 	'jqu_replace_jquery_mobile', 
-	'jqu_replace_jquery_ui'
+	'jqu_replace_jquery_ui',
+    'jqu_include_noconflict'
 	);
 
 /**

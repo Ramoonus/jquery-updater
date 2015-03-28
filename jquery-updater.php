@@ -19,8 +19,8 @@
  * Exit if accessed directly.
  * @since 2.1.4
  */
-if (!defined('ABSPATH')) {
-    exit;
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
 }
 
 /**
@@ -31,26 +31,26 @@ if (!defined('ABSPATH')) {
  * @since 2.0
  * @copyright 2015
  */
-function jqu_init()
-{
+function jqu_init() {
 }
-add_action('init', 'jqu_init');
+
+add_action( 'init', 'jqu_init' );
 
 /**
  * Load front or backend scripts
  * @since 2.1.4
  */
-if (is_admin()) {
-    /* Back End */
-    require_once(plugin_dir_path(__FILE__) . 'inc/db-updater.php');
-    require_once(plugin_dir_path(__FILE__) . 'inc/options.php');
+if ( is_admin() ) {
+	/* Back End */
+	require_once( plugin_dir_path( __FILE__ ) . 'inc/db-updater.php' );
+	require_once( plugin_dir_path( __FILE__ ) . 'inc/options.php' );
 } else {
-    /* Front End */
-    require_once(plugin_dir_path(__FILE__) . 'inc/engine.php');
+	/* Front End */
+	require_once( plugin_dir_path( __FILE__ ) . 'inc/engine.php' );
 }
 /**
  * Always load compat and deprecated
  * @since 2.1.4
  */
-require_once(plugin_dir_path(__FILE__) . 'inc/compatibility.php');
-require_once(plugin_dir_path(__FILE__) . 'inc/deprecated.php');
+require_once( plugin_dir_path( __FILE__ ) . 'inc/compatibility.php' );
+require_once( plugin_dir_path( __FILE__ ) . 'inc/deprecated.php' );

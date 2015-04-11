@@ -1,7 +1,7 @@
 === jQuery Updater ===
 Contributors: Ramoonus
 Donate link: http://www.ramoonus.nl/donate/
-Tags: jquery, update, jquery ui, javascript, jq
+Tags: jquery, jquery ui, jquery mobile
 Requires at least: 3.9
 Tested up to: 4.1.1
 Stable tag: 2.1.3

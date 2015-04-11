@@ -18,7 +18,7 @@
     "name" : "Ramoonus",
     "email" : "github@ramoonus.nl"
   } ],
-  "keywords" : [ "wordpress", "jquery" ],
+  "keywords" : [ "wordpress", "jquery", "jquery ui", "jquery mobile" ],
   "minimum-stability" : "stable",
   "license" : "GPL-3.0",
   "type" : "wordpress-plugin",

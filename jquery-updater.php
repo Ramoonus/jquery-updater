@@ -54,3 +54,11 @@ if ( is_admin() ) {
  */
 require_once( plugin_dir_path( __FILE__ ) . 'inc/compatibility.php' );
 require_once( plugin_dir_path( __FILE__ ) . 'inc/deprecated.php' );
+
+/**
+ * Add Alpha and Beta includes
+ * @since 2.1.4
+ * @todo if conditions
+ */
+//require_once( plugin_dir_path( __FILE__ ) . 'inc/alpha.php' );
+//require_once( plugin_dir_path( __FILE__ ) . 'inc/beta.php' );

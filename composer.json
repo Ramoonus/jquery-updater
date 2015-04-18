@@ -8,7 +8,7 @@
     "wordpress": "3.9"
   },
   "require-dev" : {
-    "phpunit/phpunit" : ">=4.5.0",
+    "phpunit/phpunit" : ">=4.6.0",
     "phpdocumentor/phpdocumentor" : "2.*",
     "squizlabs/php_codesniffer" : ">=2.3.0",
     "pdepend/pdepend" : "2.0.6",

@@ -12,7 +12,8 @@
     "phpdocumentor/phpdocumentor" : "2.*",
     "squizlabs/php_codesniffer" : ">=2.3.0",
     "pdepend/pdepend" : "2.0.6",
-    "yoast/yoastcs" : "dev-master"
+    "yoast/yoastcs" : "dev-master",
+    "wp-coding-standards/wpcs": "dev-develop"
   },
   "authors" : [ {
     "name" : "Ramoonus",

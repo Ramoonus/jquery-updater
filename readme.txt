@@ -4,7 +4,7 @@ Donate link: http://www.ramoonus.nl/donate/
 Tags: jquery, jquery ui, jquery mobile
 Requires at least: 3.9
 Tested up to: 4.2
-Stable tag: 2.1.3
+Stable tag: 2.1.4
 
 This plugin updates jQuery to the latest stable version on your website.
 
@@ -37,6 +37,9 @@ A: Using jQuery version 2 could break your site.
 * Added support for CI using Travis
 * Added support for Composer
 * Tested with PHP 5.3-5.6, HHVM, PHP 7
+
+= 2.1.4 =
+* Updated jQuery to 2.1.4
 
 = 2.1.3 =
 * Updated jQuery to 2.1.3

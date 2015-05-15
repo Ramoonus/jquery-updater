@@ -3,19 +3,17 @@ Contributors: Ramoonus
 Donate link: http://www.ramoonus.nl/donate/
 Tags: jquery, update, jquery ui, javascript, jq
 Requires at least: 3.9
-Tested up to: 4.1.1
-Stable tag: 2.1.3
+Tested up to: 4.2
+Stable tag: 2.1.4
 
 This plugin updates jQuery to the latest stable version on your website.
 
 == Description ==
-This plugin updates jQuery to the latest stable version on your website.
+This plugin updates jQuery to the latest official stable version on your website.
 
 For more about jQuery information visit [jquery.com](http://jquery.com)
 
-
-=== Dev version status ===
-[![Build Status](https://travis-ci.org/Ramoonus/jQuery-Updater.png?branch=master)](https://travis-ci.org/Ramoonus/jQuery-Updater)
+Please report bugs and issues on our [GitHub Issues page](https://github.com/Ramoonus/jQuery-Updater/issues)
 
 == Installation ==
 1. Upload `jquery-updater/` to the `/wp-content/plugins/` directory
@@ -29,11 +27,15 @@ A: possibly not
 2. Q: This plugin doesn`t seem to do anything?
 A: If you don`t know what you are doing, or what to expect from this plugin: read the readme
 
-3. Q: This plugin breaks my site!
+3. Q: This plugin breaks my site! How do I fix it?
 A: Using jQuery version 2 could break your site.
 
 
 == Changelog ==
+= 2.1.4 =
+* Updated jQuery to 2.1.4
+* Updated Readme
+
 = 2.1.3 =
 * Updated jQuery to 2.1.3
 * Fixed a bug with jQuery Migrate not properly loading
@@ -144,5 +146,5 @@ jQuery 2.0 has the same API as jQuery 1.9, but does not support Internet Explore
 * First version, uses jQuery 1.5.2 on Googles CDN
 
 == Upgrade Notice == 
-= 2.1.1 = 
-* Updated jQuery to 2.1.1
+= 2.1.4 =
+* Updated jQuery to 2.1.4

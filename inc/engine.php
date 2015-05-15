@@ -19,11 +19,11 @@ $scriptdebug = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
  *
  * @since 1.0
  * @return void
- * @version 2.1.3
+ * @version 2.1.4
  */
 function rw_jquery_updater() {
 	wp_deregister_script( 'jquery' );
-	wp_enqueue_script( 'jquery', plugins_url( '/js/jquery/jquery-2.1.3.min.js', __FILE__ ), false, '2.1.3' );
+	wp_enqueue_script( 'jquery', plugins_url( '/js/jquery/jquery-2.1.43.min.js', __FILE__ ), false, '2.1.4' );
 }
 
 if ( get_option( 'jqu_replace_jquery' ) ) {

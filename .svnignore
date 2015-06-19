@@ -1,9 +1,18 @@
+# Git
 .git/
 .gitignore
+.gitattributes
+
+# GitHub
+.editorconfig
 readme.md
 contribute.md
+
+# Unit Testing
 tests/
-doc/
 .travis.yml
 composer.json
 phpunit.xml
+
+# PHP
+doc/

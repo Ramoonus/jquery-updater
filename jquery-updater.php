@@ -62,3 +62,10 @@ require_once( plugin_dir_path( __FILE__ ) . 'inc/deprecated.php' );
  */
 //require_once( plugin_dir_path( __FILE__ ) . 'inc/alpha.php' );
 //require_once( plugin_dir_path( __FILE__ ) . 'inc/beta.php' );
+
+/**
+ * WPUpdatePhp
+ *
+ * @since 2.1.6
+ */
+//require_once( plugin_dir_path( __FILE__ ) . 'inc/WPUpdatePhp.php.php' );

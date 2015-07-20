@@ -10,7 +10,7 @@
  *
  * @since 2.1.4
  * @return boolean
- * @todo todo: load newer version of this library? give warning in admin
+ * @todo load newer version of this library? give warning in admin
  */
 function jq_detect_blockui() {
 	if ( wp_script_is( 'jquery-blockui', 'enqueued' ) || wp_script_is( 'blockui', 'enqueued' ) ) {
@@ -23,6 +23,9 @@ function jq_detect_blockui() {
 
 /**
  * Retrieve if blockui will be replaced and if possible
+ *
+ * @since 2.1.4
+ * @return boolean
  */
 if ( get_option( 'jqu_compat_blockui' ) && jq_detect_blockui() ) {
 	/* Deregister */

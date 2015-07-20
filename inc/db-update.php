@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Options Update and Installer
  *
@@ -10,12 +9,17 @@
 /**
  * Install
  *
- * @todo turn into array
+ * @todo turn into array, work out some dummy code
  * @return void
  * @since 2.1.4
  * @version 2.1.4
  */
 function jqu_db_install() {
+
+	$newoptions = array();
+
+	//foreach($newoptions as $option)
+
 	// If Version Number does not exists // Fresh Install
 	if ( ! get_option( 'jqu_db_version' ) ) {
 		add_option( 'jqu_db_version', '2.1.4' );
@@ -30,6 +34,8 @@ function jqu_db_install() {
 		add_option( 'jqu_replace_jquery_ui', 0 ); // No
 		add_option( 'jqu_include_noconflict', 1 ); // Yes
 	}
+
+	unset $newoptions;
 }
 
 /**

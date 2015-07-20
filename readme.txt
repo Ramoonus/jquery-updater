@@ -37,6 +37,8 @@ A: Using jQuery version 2 could break your site.
 * Added support for CI using Travis
 * Added support for Composer
 * Tested with PHP 5.3-5.6, HHVM, PHP 7
+* Include jQuery 3.0.0
+* Upgrade jQuery  Migrate to work with jQ 3.0.0
 
 = 2.1.4 =
 * Updated jQuery to 2.1.4

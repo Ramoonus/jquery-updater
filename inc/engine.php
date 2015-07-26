@@ -132,8 +132,9 @@ function jqu_qunit_loader() {
 	$ver = '1.17.1';
 
 	// JS
-
+    wp_enqueue_script( 'qunit', plugins_url( '/js/qunit-' . $ver . $suffix .'.js', __FILE__ ), array( 'jquery' ), $ver  );
 	// CSS
+	wp_enqueue_style( 'qunit-css', plugins_url( '/css/qunit-' . $ver . '.css', __FILE__ ), false, $ver );
 
 }
 

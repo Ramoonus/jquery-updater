@@ -70,5 +70,14 @@ if ( rw_jquery_updater_beta = true)   { require_once( plugin_dir_path( __FILE__ 
  * WPUpdatePhp
  *
  * @since 2.1.6
+ * @todo disable self/plugin
  */
+
 //require_once( plugin_dir_path( __FILE__ ) . 'inc/WPUpdatePhp.php' );
+
+/*$updatePhp = new WPUpdatePhp( '5.3.0' );
+
+if ( $updatePhp->does_it_meet_required_php_version( PHP_VERSION ) ) {
+ // Instantiate new object here
+}
+*/

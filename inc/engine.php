@@ -111,6 +111,7 @@ if ( get_option( 'jqu_replace_jquery_ui' ) ) {
  * @since 2.1.4
  * @return void
  * @todo minify / non minified version or deny $suffix
+ * @version 1.0
  */
 function jqu_jquery_noconflict() {
 	wp_enqueue_script( 'jquery-conflict', plugins_url( '/js/noconflict.js', __FILE__ ), array( 'jquery' ), '1.0' );

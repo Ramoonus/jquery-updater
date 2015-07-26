@@ -105,7 +105,7 @@ function jqu_jquery_ui() {
 	// JS
 	wp_enqueue_script( 'jquery-ui', plugins_url( '/js/ui/jquery-ui-' . $ver . $suffix . '.js', __FILE__ ), array( 'jquery' ), $ver );
 	// CSS
-	wp_enqueue_style( 'jquery-ui-css', plugins_url( '/css/ui/jquery-ui-' . $ver . '.css', __FILE__ ), false, $ver );
+	wp_enqueue_style( 'jquery-ui-css', plugins_url( '/css/ui/jquery-ui-' . $ver . $suffix . '.css', __FILE__ ), false, $ver );
 
 }
 

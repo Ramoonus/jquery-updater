@@ -14,8 +14,8 @@
  */
 $suffix = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
 
-/** jQuery
- * Reregister core jQuery
+/**
+ * jQuery
  *
  * @since 1.0
  * @return void
@@ -38,6 +38,7 @@ if ( get_option( 'jqu_replace_jquery' ) ) {
  *
  * @since 2.1.4
  * @return void
+ * @version 1.2.1
  */
 function rw_jquery_migrate() {
 	$ver = '1.2.1'; // @todo make dynamic via get_option()

@@ -8,13 +8,13 @@
     "wordpress": "3.9"
   },
   "require-dev" : {
-    "phpunit/phpunit" : ">=4.6.0",
+    "phpunit/phpunit" : ">=4.8.0",
     "phpdocumentor/phpdocumentor" : "2.*",
     "squizlabs/php_codesniffer" : ">=2.3.0",
-    "pdepend/pdepend" : "2.0.6",
+    "pdepend/pdepend" : "2.1.0",
     "yoast/yoastcs" : "dev-master",
     "scrutinizer/ocular": ">=1.0.0",
-    "wp-coding-standards/wpcs": "dev-develop"
+    "wp-coding-standards/wpcs": "0.6.*"
   },
   "authors" : [ {
     "name" : "Ramoonus",

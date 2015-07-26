@@ -75,11 +75,16 @@ if ( get_option( 'jqu_replace_jquery_login' ) ) {
  *
  * @since 2.1.4
  * @return void
+ * @version 1.4.5
  */
 function jqu_mobile() {
-	// JS
+	function jqu_jquery_ui() {
+		$ver ='1.4.5';
 
-	// CSS
+		// JS
+		wp_enqueue_script( 'jquery-mobile', plugins_url( '/js/mobile/jquery.mobile-' . $ver . $suffix . '.js', __FILE__ ), array( 'jquery' ), $ver );
+		// CSS
+		wp_enqueue_style( 'jquery-mobile-css', plugins_url( '/css/mobile/jquery.mobile-' . $ver . $suffix . '.css', __FILE__ ), false, $ver );
 
 }
 

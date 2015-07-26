@@ -1,7 +1,7 @@
 {
   "name" : "Ramoonus/jQuery-Updater",
   "description" : "This plugin updates jQuery to the latest stable version on your website.",
-  "version" : "2.1.4",
+  "version" : "3.0.0",
   "require" : {
     "composer/installers" : "~1.0.0",
     "php" : ">=5.3.0",

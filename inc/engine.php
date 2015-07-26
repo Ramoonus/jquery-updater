@@ -7,8 +7,7 @@
 /**
  * Script Debug
  *
- * source: https://pippinsplugins.com/use-script_debug-enable-non-minified-asset-files/
- *
+ * @link https://pippinsplugins.com/use-script_debug-enable-non-minified-asset-files/
  * @since 2.1.4
  * @return string
  * @version 1.0
@@ -17,16 +16,18 @@
 $suffix = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
 
 /** jQuery
- * Deregister core jQuery
+ * Reregister core jQuery
  *
  * @since 1.0
  * @return void
  * @version 2.1.4
- * @todo dynamic version loading
  */
 function rw_jquery_updater() {
+	$ver = '2.1.4'; // @todo make dynamic via get_option()
+	$footer = false; // @todo make dynamic via get_option()
+
 	wp_deregister_script( 'jquery' );
-	wp_enqueue_script( 'jquery', plugins_url( '/js/jquery/jquery-2.1.4' . $suffix . '.js', __FILE__ ), false, '2.1.4' );
+	wp_enqueue_script( 'jquery', plugins_url( '/js/jquery/jquery-' . $ver . $suffix . '.js', __FILE__ ), false, $ver, $footer );
 }
 
 // Detect if to replace jQuery
@@ -38,12 +39,12 @@ if ( get_option( 'jqu_replace_jquery' ) ) {
  *
  * @since 2.1.4
  * @return void
- * @version 1.2.1
- * @todo include $scriptdebug
  */
 function rw_jquery_migrate() {
+	$ver = '1.2.1'; // @todo make dynamic via get_option()
+
 	wp_deregister_script( 'jquery-migrate' );
-	wp_enqueue_script( 'jquery-migrate', plugins_url( '/js/migrate/jquery-migrate-1.2.1' . $suffix . '.js', __FILE__ ), array( 'jquery' ), '1.2.1' );
+	wp_enqueue_script( 'jquery-migrate', plugins_url( '/js/migrate/jquery-migrate-' . $ver . $suffix . '.js', __FILE__ ), array( 'jquery' ), $ver );
 }
 
 // Detect if to replace jQuery Migrate
@@ -128,6 +129,8 @@ if ( get_option( 'jqu_include_noconflict' ) ) {
  * @return void
  */
 function jqu_qunit_loader() {
+	$ver = '1.17.1';
+
 	// JS
 
 	// CSS

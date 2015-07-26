@@ -26,7 +26,7 @@ $suffix = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
  */
 function rw_jquery_updater() {
 	wp_deregister_script( 'jquery' );
-	wp_enqueue_script( 'jquery', plugins_url( '/js/jquery/jquery-2.1.43' . $suffix . '.js', __FILE__ ), false, '2.1.4' );
+	wp_enqueue_script( 'jquery', plugins_url( '/js/jquery/jquery-2.1.4' . $suffix . '.js', __FILE__ ), false, '2.1.4' );
 }
 
 // Detect if to replace jQuery

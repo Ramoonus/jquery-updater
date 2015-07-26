@@ -92,11 +92,15 @@ if ( get_option( 'jqu_replace_jquery_mobile' ) ) {
  *
  * @since 2.1.4
  * @return void
+ * @version 1.11.4
  */
 function jqu_jquery_ui() {
-	// JS
+	$ver ='1.11.4';
 
-	// CS
+	// JS
+	wp_enqueue_script( 'jquery-ui', plugins_url( '/js/ui/jquery-ui-' . $ver . $suffix . '.js', __FILE__ ), array( 'jquery' ), $ver );
+	// CSS
+	wp_enqueue_style( 'jquery-ui-css', plugins_url( '/css/ui/jquery-ui-' . $ver . '.css', __FILE__ ), false, $ver );
 
 }
 

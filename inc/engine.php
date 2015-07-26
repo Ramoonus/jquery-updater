@@ -11,7 +11,6 @@
  * @since 2.1.4
  * @return string
  * @version 1.0
-
  */
 $suffix = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
 
@@ -23,7 +22,7 @@ $suffix = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
  * @version 2.1.4
  */
 function rw_jquery_updater() {
-	$ver = '2.1.4'; // @todo make dynamic via get_option()
+	$ver    = '2.1.4'; // @todo make dynamic via get_option()
 	$footer = false; // @todo make dynamic via get_option()
 
 	wp_deregister_script( 'jquery' );
@@ -133,7 +132,7 @@ function jqu_qunit_loader() {
 	$ver = '1.17.1';
 
 	// JS
-    wp_enqueue_script( 'qunit', plugins_url( '/js/qunit/qunit-' . $ver . $suffix .'.js', __FILE__ ), array( 'jquery' ), $ver  );
+	wp_enqueue_script( 'qunit', plugins_url( '/js/qunit/qunit-' . $ver . $suffix . '.js', __FILE__ ), array( 'jquery' ), $ver );
 	// CSS
 	wp_enqueue_style( 'qunit-css', plugins_url( '/css/qunit/qunit-' . $ver . '.css', __FILE__ ), false, $ver );
 

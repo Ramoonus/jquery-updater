@@ -20,12 +20,15 @@ $scriptdebug = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
  * @since 1.0
  * @return void
  * @version 2.1.4
+ * @todo dynamic version loading
+ * @todo include $scriptdebug
  */
 function rw_jquery_updater() {
 	wp_deregister_script( 'jquery' );
 	wp_enqueue_script( 'jquery', plugins_url( '/js/jquery/jquery-2.1.43.min.js', __FILE__ ), false, '2.1.4' );
 }
 
+// Detect if to replace jQuery
 if ( get_option( 'jqu_replace_jquery' ) ) {
 	add_action( 'wp_enqueue_scripts', 'rw_jquery_updater' );
 }
@@ -35,12 +38,14 @@ if ( get_option( 'jqu_replace_jquery' ) ) {
  * @since 2.1.4
  * @return void
  * @version 1.2.1
+ * @todo include $scriptdebug
  */
 function rw_jquery_migrate() {
 	wp_deregister_script( 'jquery-migrate' );
 	wp_enqueue_script( 'jquery-migrate', plugins_url( '/js/migrate/jquery-migrate-1.2.1.min.js', __FILE__ ), array( 'jquery' ), '1.2.1' );
 }
 
+// Detect if to replace jQuery Migrate
 if ( get_option( 'jqu_replace_jquery_migrate' ) ) {
 	add_action( 'wp_enqueue_scripts', 'rw_jquery_migrate' );
 }

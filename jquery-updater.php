@@ -27,8 +27,8 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Init jQuery (old function)
  * @return void
  * @author Ramon "Ramoonus" van Belzen
- * @version 2.1.4-beta
- * @since 2.0
+ * @version 3.0.0
+ * @since 2.0.0
  * @copyright 2015
  */
 function jqu_init() {
@@ -68,4 +68,4 @@ require_once( plugin_dir_path( __FILE__ ) . 'inc/deprecated.php' );
  *
  * @since 2.1.6
  */
-//require_once( plugin_dir_path( __FILE__ ) . 'inc/WPUpdatePhp.php.php' );
+//require_once( plugin_dir_path( __FILE__ ) . 'inc/WPUpdatePhp.php' );

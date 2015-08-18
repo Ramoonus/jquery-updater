@@ -2,7 +2,7 @@
 /**
  * Shortcode
  * @since 1.8.0
- * @todo toggle
+ * @todo test with 4.2.3 / 4.3
  * @return string
  */
 function jqu_shortcode( $atts, $content = null ) {

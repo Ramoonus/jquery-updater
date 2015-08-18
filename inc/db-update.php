@@ -13,6 +13,7 @@
  * @return void
  * @since 2.1.4
  * @version 2.1.4
+ * @todo detect if db option version number excists
  */
 function jqu_db_install() {
 
@@ -43,12 +44,14 @@ function jqu_db_install() {
  *
  * @return void
  * @since 2.1.4
- * @version 2.1.4
+ * @version 3.0.0
  */
 function jqu_db_update() {
+	
+	
 	if ( version_compare( get_option( 'jqu_db_version' ), '2.1.4', '<=' ) ) {
 		// Update DB Version to 2.1.4
-		update_option( 'jqu_db_version', '2.1.4' );
+		update_option( 'jqu_db_version', '3.0.0' );
 	}
 }
 

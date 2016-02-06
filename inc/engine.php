@@ -46,6 +46,26 @@ function rw_jquery_get_version() {
     return $ver;
 }
 
+/**
+ * Retrieve if jQuery should be loaded in footer
+ *
+ * @return boolean
+ * @since 3.0.0
+ * @todo validate
+ */
+function rw_jquery_get_footer() {
+    $footer = get_option('jqu_jquery_get_footer');
+
+    // upon empty use false
+    if ( !$footer ) {
+		$footer = 0;
+    }
+
+    return $footer;
+
+}
+
+
 // Detect if to replace jQuery
 if ( get_option( 'jqu_replace_jquery' ) ) {
 	add_action( 'wp_enqueue_scripts', 'rw_jquery_updater' );

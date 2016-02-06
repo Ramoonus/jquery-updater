@@ -34,7 +34,8 @@ function jqu_db_install() {
 		add_option( 'jqu_replace_jquery_mobile', 0 ); // No
 		add_option( 'jqu_replace_jquery_ui', 0 ); // No
 		add_option( 'jqu_include_noconflict', 1 ); // Yes
-		add_option( 'jqu_jquery_version', '2.1.4' )
+		add_option( 'jqu_jquery_version', '2.1.4' );
+		add_option( 'jqu_jquery_get_footer', 0 );
 	}
 
 	unset $newoptions;

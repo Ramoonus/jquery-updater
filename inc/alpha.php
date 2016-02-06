@@ -1,5 +1,0 @@
-<?php
-/**
- * Alpha Code
- *
- */

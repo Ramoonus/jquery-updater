@@ -54,14 +54,3 @@ if ( is_admin() ) {
  */
 require_once( plugin_dir_path( __FILE__ ) . 'inc/compatibility.php' );
 require_once( plugin_dir_path( __FILE__ ) . 'inc/deprecated.php' );
-
-/**
- * Add Alpha and Beta includes
- * @since 2.1.4
- * @todo if conditions
- */
-define('rw_jquery_updater_alpha' , false);
-define('rw_jquery_updater_beta' , false);
-
-if ( rw_jquery_updater_alpha = true ) { require_once( plugin_dir_path( __FILE__ ) . 'inc/alpha.php' ); }
-if ( rw_jquery_updater_beta = true)   { require_once( plugin_dir_path( __FILE__ ) . 'inc/beta.php' );  }

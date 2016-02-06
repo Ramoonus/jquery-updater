@@ -32,6 +32,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @copyright 2015
  */
 function jqu_init() {
+	//
 }
 
 add_action( 'init', 'jqu_init' );
@@ -42,7 +43,10 @@ add_action( 'init', 'jqu_init' );
  */
 if ( is_admin() ) {
 	/* Back End */
+	/* @todo run updater only on activation */
 	require_once( plugin_dir_path( __FILE__ ) . 'inc/db-updater.php' );
+
+	/* Get options and aliasses */
 	require_once( plugin_dir_path( __FILE__ ) . 'inc/options.php' );
 } else {
 	/* Front End */

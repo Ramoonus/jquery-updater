@@ -13,7 +13,7 @@
  * @return void
  * @since 2.1.4
  * @version 2.1.4
- * @todo detect if db option version number excists
+ * @todo detect if db option version number exists
  */
 function jqu_db_install() {
 
@@ -34,6 +34,7 @@ function jqu_db_install() {
 		add_option( 'jqu_replace_jquery_mobile', 0 ); // No
 		add_option( 'jqu_replace_jquery_ui', 0 ); // No
 		add_option( 'jqu_include_noconflict', 1 ); // Yes
+		add_option( 'jqu_jquery_version', '2.1.4' )
 	}
 
 	unset $newoptions;
@@ -48,10 +49,8 @@ function jqu_db_install() {
  */
 function jqu_db_update() {
 	
-	
 	if ( version_compare( get_option( 'jqu_db_version' ), '2.1.4', '<=' ) ) {
 		// Update DB Version to 2.1.4
 		update_option( 'jqu_db_version', '3.0.0' );
 	}
 }
-

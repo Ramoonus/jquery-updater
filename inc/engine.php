@@ -22,11 +22,28 @@ $suffix = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
  * @version 2.1.4
  */
 function rw_jquery_updater() {
-	$ver    = '2.1.4'; // @todo make dynamic via get_option()
+	$ver    = rw_jquery_get_version();
 	$footer = false; // @todo make dynamic via get_option()
 
 	wp_deregister_script( 'jquery' );
 	wp_enqueue_script( 'jquery', plugins_url( '/js/jquery/jquery-' . $ver . $suffix . '.js', __FILE__ ), false, $ver, $footer );
+}
+
+/**
+ * Retrieve jQuery version from database\
+ * @return string
+ * @since 3.0.0
+ */
+function rw_jquery_get_version() {
+    // always filled upon plugin activation
+    $ver = get_option('jqu_jquery_version');
+
+    // upon null, use 2.1.4
+	if ( !$ver ) {
+        $ver = '2.1.4';
+    }
+
+    return $ver;
 }
 
 // Detect if to replace jQuery

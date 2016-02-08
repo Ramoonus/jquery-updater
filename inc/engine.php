@@ -30,7 +30,7 @@ function rw_jquery_updater() {
 }
 
 /**
- * Retrieve jQuery version from database\
+ * Retrieve jQuery version from database
  * @return string
  * @since 3.0.0
  */
@@ -58,11 +58,16 @@ function rw_jquery_get_footer() {
 
     // upon empty use false
     if ( !$footer ) {
-		$footer = 0;
+		return false;
     }
-
-    return $footer;
-
+	elseif ( $footer = true ) {
+		return $footer;
+	}
+	elseif ( $footer = false ) {
+		return $footer; }
+	else {
+		return false;
+	}
 }
 
 
@@ -70,6 +75,7 @@ function rw_jquery_get_footer() {
 if ( get_option( 'jqu_replace_jquery' ) ) {
 	add_action( 'wp_enqueue_scripts', 'rw_jquery_updater' );
 }
+
 /**
  * jQuery Migrate
  *
@@ -78,7 +84,7 @@ if ( get_option( 'jqu_replace_jquery' ) ) {
  * @version 1.2.1
  */
 function rw_jquery_migrate() {
-	$ver = '1.2.1'; // @todo make dynamic via get_option()
+	$ver = rw_jquery_migrate_get_version();
 
 	wp_deregister_script( 'jquery-migrate' );
 	wp_enqueue_script( 'jquery-migrate', plugins_url( '/js/migrate/jquery-migrate-' . $ver . $suffix . '.js', __FILE__ ), array( 'jquery' ), $ver );
@@ -87,6 +93,23 @@ function rw_jquery_migrate() {
 // Detect if to replace jQuery Migrate
 if ( get_option( 'jqu_replace_jquery_migrate' ) ) {
 	add_action( 'wp_enqueue_scripts', 'rw_jquery_migrate' );
+}
+
+/**
+ * Retrieve jQuery version from database
+ * @return string
+ * @since 3.0.0
+ */
+function rw_jquery_migrate_get_version() {
+	// always filled upon plugin activation
+	$ver = get_option('jqu_jquery_migrate_version');
+
+	// upon null, use 2.1.4
+	if ( !$ver ) {
+		$ver = '1.2.1';
+	}
+
+	return $ver;
 }
 
 /**
@@ -138,13 +161,23 @@ if ( get_option( 'jqu_replace_jquery_mobile' ) ) {
  * @version 1.11.4
  */
 function jqu_jquery_ui() {
-	$ver ='1.11.4';
+	$ver = rw_jquery_ui_get_version();
 
 	// JS
 	wp_enqueue_script( 'jquery-ui', plugins_url( '/js/ui/jquery-ui-' . $ver . $suffix . '.js', __FILE__ ), array( 'jquery' ), $ver );
 	// CSS
 	wp_enqueue_style( 'jquery-ui-css', plugins_url( '/css/ui/jquery-ui-' . $ver . $suffix . '.css', __FILE__ ), false, $ver );
 
+}
+
+function rw_jquery_ui_get_version() {
+	// always filled upon plugin activation
+	$ver = get_option('jqu_jquery_ui_version');
+    // upon null, use 2.1.4
+	if ( !$ver ) {
+		$ver = '1.11.4';
+	}
+	return $ver;
 }
 
 if ( get_option( 'jqu_replace_jquery_ui' ) ) {
@@ -176,13 +209,24 @@ if ( get_option( 'jqu_include_noconflict' ) ) {
  * @return void
  */
 function jqu_qunit_loader() {
-	$ver = '1.17.1';
+	$ver = rw_jquery_ui_get_version();
 
 	// JS
 	wp_enqueue_script( 'qunit', plugins_url( '/js/qunit/qunit-' . $ver . $suffix . '.js', __FILE__ ), array( 'jquery' ), $ver );
 	// CSS
 	wp_enqueue_style( 'qunit-css', plugins_url( '/css/qunit/qunit-' . $ver . '.css', __FILE__ ), false, $ver );
 
+}
+
+
+function rw_jquery_ui_get_version() {
+    // always filled upon plugin activation
+    $ver = get_option('jqu_qunit_version');
+    // upon null, use latest
+    if ( !$ver ) {
+        $ver = '1.21.0';
+    }
+      return $ver;
 }
 
 if ( get_option( 'jqu_qunit' ) ) {

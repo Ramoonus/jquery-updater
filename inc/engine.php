@@ -22,17 +22,17 @@ $suffix = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
  * @version 2.1.4
  */
 function rw_jquery_updater() {
-	$ver    = get_option('jqu_jquery_version');
+    $ver    = get_option('jqu_jquery_version');
 
-	// upon null, use 2.1.4
-	if ( !$ver ) {
-		$ver = '2.1.4';
-	}
+    // upon null, use 2.1.4
+    if ( !$ver ) {
+        $ver = '2.1.4';
+    }
 
-	$footer = rw_jquery_get_footer();
+    $footer = rw_jquery_get_footer();
 
-	wp_deregister_script( 'jquery' );
-	wp_enqueue_script( 'jquery', plugins_url( '/js/jquery/jquery-' . $ver . $suffix . '.js', __FILE__ ), false, $ver, $footer );
+    wp_deregister_script( 'jquery' );
+    wp_enqueue_script( 'jquery', plugins_url( '/js/jquery/jquery-' . $ver . $suffix . '.js', __FILE__ ), false, $ver, $footer );
 }
 
 /**
@@ -46,25 +46,25 @@ function rw_jquery_get_footer() {
 
     // upon empty use false
     if ( !$footer ) {
-		return false;
+        return false;
     }
-	// upon true return true
-	elseif ( $footer = true ) {
-		return $footer;
-	}
-	// upon false return false
-	elseif ( $footer = false ) {
-		return $footer; }
-	// upon undeclared return false
-	else {
-		return false;
-	}
+    // upon true return true
+    elseif ( $footer = true ) {
+        return $footer;
+    }
+    // upon false return false
+    elseif ( $footer = false ) {
+        return $footer; }
+    // upon undeclared return false
+    else {
+        return false;
+    }
 }
 
 
 // Detect if to replace jQuery
 if ( get_option( 'jqu_replace_jquery' ) ) {
-	add_action( 'wp_enqueue_scripts', 'rw_jquery_updater' );
+    add_action( 'wp_enqueue_scripts', 'rw_jquery_updater' );
 }
 
 /**
@@ -75,20 +75,20 @@ if ( get_option( 'jqu_replace_jquery' ) ) {
  * @version 1.2.1
  */
 function rw_jquery_migrate() {
-	$ver = $ver = get_option('jqu_jquery_migrate_version');
+    $ver = $ver = get_option('jqu_jquery_migrate_version');
 
-	// upon null, use 2.1.4
-	if ( !$ver ) {
-		$ver = '1.2.1';
-	};
+    // upon null, use 2.1.4
+    if ( !$ver ) {
+        $ver = '1.2.1';
+    };
 
-	wp_deregister_script( 'jquery-migrate' );
-	wp_enqueue_script( 'jquery-migrate', plugins_url( '/js/migrate/jquery-migrate-' . $ver . $suffix . '.js', __FILE__ ), array( 'jquery' ), $ver );
+    wp_deregister_script( 'jquery-migrate' );
+    wp_enqueue_script( 'jquery-migrate', plugins_url( '/js/migrate/jquery-migrate-' . $ver . $suffix . '.js', __FILE__ ), array( 'jquery' ), $ver );
 }
 
 // Detect if to replace jQuery Migrate
 if ( get_option( 'jqu_replace_jquery_migrate' ) ) {
-	add_action( 'wp_enqueue_scripts', 'rw_jquery_migrate' );
+    add_action( 'wp_enqueue_scripts', 'rw_jquery_migrate' );
 }
 
 /**
@@ -98,7 +98,7 @@ if ( get_option( 'jqu_replace_jquery_migrate' ) ) {
  * @since 2.1.4
  */
 if ( get_option( 'jqu_replace_jquery_admin' ) ) {
-	add_action( 'admin_enqueue_scripts', 'rw_jquery_updater' );
+    add_action( 'admin_enqueue_scripts', 'rw_jquery_updater' );
 }
 
 /**
@@ -107,7 +107,7 @@ if ( get_option( 'jqu_replace_jquery_admin' ) ) {
  * @since 2.1.4
  */
 if ( get_option( 'jqu_replace_jquery_login' ) ) {
-	add_action( 'login_enqueue_scripts', 'rw_jquery_updater' );
+    add_action( 'login_enqueue_scripts', 'rw_jquery_updater' );
 }
 
 /**
@@ -118,17 +118,17 @@ if ( get_option( 'jqu_replace_jquery_login' ) ) {
  * @version 1.4.5
  */
 function jqu_mobile() {
-		$ver = get_option(' jqu_mobile_version' );
+    $ver = get_option(' jqu_mobile_version' );
 
-		// JS
-		wp_enqueue_script( 'jquery-mobile', plugins_url( '/js/mobile/jquery.mobile-' . $ver . $suffix . '.js', __FILE__ ), array( 'jquery' ), $ver );
-		// CSS
-		wp_enqueue_style( 'jquery-mobile-css', plugins_url( '/css/mobile/jquery.mobile-' . $ver . $suffix . '.css', __FILE__ ), false, $ver );
+    // JS
+    wp_enqueue_script( 'jquery-mobile', plugins_url( '/js/mobile/jquery.mobile-' . $ver . $suffix . '.js', __FILE__ ), array( 'jquery' ), $ver );
+    // CSS
+    wp_enqueue_style( 'jquery-mobile-css', plugins_url( '/css/mobile/jquery.mobile-' . $ver . $suffix . '.css', __FILE__ ), false, $ver );
 
 }
 
 if ( get_option( 'jqu_replace_jquery_mobile' ) ) {
-	add_action( 'wp_enqueue_scripts', 'rw_jquery_updater' );
+    add_action( 'wp_enqueue_scripts', 'rw_jquery_updater' );
 }
 
 /**
@@ -139,22 +139,22 @@ if ( get_option( 'jqu_replace_jquery_mobile' ) ) {
  * @version 1.11.4
  */
 function jqu_jquery_ui() {
-	$ver = get_option('jqu_jquery_ui_version');
+    $ver = get_option('jqu_jquery_ui_version');
 
-	// upon null, use 1.11.4
-	if ( !$ver ) {
-		$ver = '1.11.4';
-	}
+    // upon null, use 1.11.4
+    if ( !$ver ) {
+        $ver = '1.11.4';
+    }
 
-	// JS
-	wp_enqueue_script( 'jquery-ui', plugins_url( '/js/ui/jquery-ui-' . $ver . $suffix . '.js', __FILE__ ), array( 'jquery' ), $ver );
-	// CSS
-	wp_enqueue_style( 'jquery-ui-css', plugins_url( '/css/ui/jquery-ui-' . $ver . $suffix . '.css', __FILE__ ), false, $ver );
+    // JS
+    wp_enqueue_script( 'jquery-ui', plugins_url( '/js/ui/jquery-ui-' . $ver . $suffix . '.js', __FILE__ ), array( 'jquery' ), $ver );
+    // CSS
+    wp_enqueue_style( 'jquery-ui-css', plugins_url( '/css/ui/jquery-ui-' . $ver . $suffix . '.css', __FILE__ ), false, $ver );
 
 }
 
 if ( get_option( 'jqu_replace_jquery_ui' ) ) {
-	add_action( 'wp_enqueue_scripts', 'jqu_jquery_ui' );
+    add_action( 'wp_enqueue_scripts', 'jqu_jquery_ui' );
 }
 
 /**
@@ -166,13 +166,13 @@ if ( get_option( 'jqu_replace_jquery_ui' ) ) {
  * @version 1.0
  */
 function jqu_jquery_noconflict() {
-	$ver = '1.0';
-	wp_enqueue_script( 'jquery-conflict', plugins_url( '/js/noconflict.js', __FILE__ ), array( 'jquery' ), $ver, false );
+    $ver = '1.0';
+    wp_enqueue_script( 'jquery-conflict', plugins_url( '/js/noconflict.js', __FILE__ ), array( 'jquery' ), $ver, false );
 
 }
 
 if ( get_option( 'jqu_include_noconflict' ) ) {
-	add_action( 'wp_enqueue_scripts', 'jqu_jquery_noconflict' );
+    add_action( 'wp_enqueue_scripts', 'jqu_jquery_noconflict' );
 }
 
 /**
@@ -183,21 +183,21 @@ if ( get_option( 'jqu_include_noconflict' ) ) {
  * @return void
  */
 function jqu_qunit_loader() {
-	$ver = get_option('jqu_qunit_version');
-	// upon null, use latest
-	if ( !$ver ) {
-		$ver = '1.21.0';
-	}
+    $ver = get_option('jqu_qunit_version');
+    // upon null, use latest
+    if ( !$ver ) {
+        $ver = '1.21.0';
+    }
 
-	// JS
-	wp_enqueue_script( 'qunit', plugins_url( '/js/qunit/qunit-' . $ver . $suffix . '.js', __FILE__ ), array( 'jquery' ), $ver );
-	// CSS
-	wp_enqueue_style( 'qunit-css', plugins_url( '/css/qunit/qunit-' . $ver . '.css', __FILE__ ), false, $ver );
+    // JS
+    wp_enqueue_script( 'qunit', plugins_url( '/js/qunit/qunit-' . $ver . $suffix . '.js', __FILE__ ), array( 'jquery' ), $ver );
+    // CSS
+    wp_enqueue_style( 'qunit-css', plugins_url( '/css/qunit/qunit-' . $ver . '.css', __FILE__ ), false, $ver );
 
 }
 
 if ( get_option( 'jqu_qunit' ) ) {
-	add_action( 'wp_enqueue_scripts', 'jqu_qunit_loader' );
+    add_action( 'wp_enqueue_scripts', 'jqu_qunit_loader' );
 }
 
 

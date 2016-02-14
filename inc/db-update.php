@@ -40,8 +40,10 @@ function jqu_db_install()
         add_option('jqu_jquery_ui_version', '1.11.4');
         add_option('jqu_qunit_version', '1.21.0');
 
-        unset $newoptions;
     }
+
+    
+    unset $newoptions;
 }
 
 /**

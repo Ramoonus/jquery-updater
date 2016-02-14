@@ -140,7 +140,7 @@ if ( get_option( 'jqu_replace_jquery_login' ) ) {
  */
 function jqu_mobile() {
 	function jqu_jquery_ui() {
-		$ver ='1.4.5';
+		$ver = get_option(' jqu_mobile_version' );
 
 		// JS
 		wp_enqueue_script( 'jquery-mobile', plugins_url( '/js/mobile/jquery.mobile-' . $ver . $suffix . '.js', __FILE__ ), array( 'jquery' ), $ver );

@@ -23,7 +23,8 @@ function jqu_db_install()
 
     // If Version Number does not exists // Fresh Install
     if (!get_option('jqu_db_version')) {
-        add_option('jqu_db_version', '2.1.4');
+        add_option('jqu_db_version', '2.1.4'); // Plugin version
+
         // Default options:
         add_option('jqu_compat_blockui', 0); // No
         add_option('jqu_shortcode', 0); // No
@@ -34,15 +35,16 @@ function jqu_db_install()
         add_option('jqu_replace_jquery_mobile', 0); // No
         add_option('jqu_replace_jquery_ui', 0); // No
         add_option('jqu_include_noconflict', 1); // Yes
-        add_option('jqu_jquery_version', '2.2.0'); // 2.1.4
         add_option('jqu_jquery_get_footer', 0); // False
+
+        // Version Numbers
+        add_option('jqu_jquery_version', '2.2.0');
         add_option('jqu_jquery_migrate_version', '1.3.0');
         add_option('jqu_jquery_ui_version', '1.11.4');
         add_option('jqu_qunit_version', '1.21.0');
-
+        add_option('jqu_mobile_version', '1.4.5');
     }
 
-    
     unset $newoptions;
 }
 

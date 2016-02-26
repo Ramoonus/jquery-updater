@@ -77,9 +77,9 @@ if ( get_option( 'jqu_replace_jquery' ) ) {
 function rw_jquery_migrate() {
     $ver = $ver = get_option('jqu_jquery_migrate_version');
 
-    // upon null, use 2.1.4
+    // upon null, use 1.3.0
     if ( !$ver ) {
-        $ver = '1.2.1';
+        $ver = '1.3.0';
     };
 
     wp_deregister_script( 'jquery-migrate' );

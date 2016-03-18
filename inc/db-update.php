@@ -23,7 +23,7 @@ function jqu_db_install()
 
     // If Version Number does not exists // Fresh Install
     if (!get_option('jqu_db_version')) {
-        add_option('jqu_db_version', '2.1.4'); // Plugin version
+        add_option('jqu_db_version', '2.2.1'); // Plugin version
 
         // Default options:
         add_option('jqu_compat_blockui', 0); // No
@@ -38,7 +38,7 @@ function jqu_db_install()
         add_option('jqu_jquery_get_footer', 0); // False
 
         // Version Numbers
-        add_option('jqu_jquery_version', '2.2.0');
+        add_option('jqu_jquery_version', '2.2.1');
         add_option('jqu_jquery_migrate_version', '1.3.0');
         add_option('jqu_jquery_ui_version', '1.11.4');
         add_option('jqu_qunit_version', '1.21.0');
@@ -58,21 +58,32 @@ function jqu_db_install()
 function jqu_db_update()
 {
 
+    // Plugin
     if (version_compare(get_option('jqu_db_version'), '2.1.4', '<=')) {
         // Update DB Version to latest
-        update_option('jqu_jquery_version', '2.1.4');
-    } /**
+        update_option('jqu_db_version', '2.2.1');
+    }
+    /**
      * Upgrade 2.1.4 --> 2.2.0
      */
     elseif (version_compare(get_option('jqu_db_version'), '2.1.4', '=')) {
         update_option('jqu_db_version', '2.2.0');
-        update_option('jqu_jquery_version', '1.3.0'); // minimum requirement
-    } /**
-     * jQuery Branch 1.x
-     * 1.11.3 --> 1.12.0
-     */
-    elseif (version_compare(get_option('jqu_db_version'), '1.11.3', '=')) {
-        update_option('jqu_jquery_version', '1.12.0');
+    }
+
+    // Upgrade jQuery 2.2.0 --> 2.2.1
+    // @since 2.2.1
+    if (version_compare(get_option('jqu_jquery_version'), '2.2.0', '=')) {
+        update_option('jqu_db_version', '2.2.1');
+    }
+    elseif (version_compare(get_option('jqu_jquery_version'), '1.12.0', '=')) {
+        update_option('jqu_db_version', '1.12.1');
+    }
+    // @since 2.2.2
+    if (version_compare(get_option('jqu_jquery_version'), '2.2.1', '=')) {
+        update_option('jqu_db_version', '2.2.2');
+    }
+    elseif (version_compare(get_option('jqu_jquery_version'), '1.12.1', '=')) {
+        update_option('jqu_db_version', '1.12.2');
     }
 
     /**

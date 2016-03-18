@@ -19,14 +19,14 @@ $suffix = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
  *
  * @since 1.0
  * @return void
- * @version 2.1.4
+ * @version 2.2.2
  */
 function rw_jquery_updater() {
     $ver    = get_option('jqu_jquery_version');
 
     // upon null, use 2.1.4
     if ( !$ver ) {
-        $ver = '2.1.4';
+        $ver = '2.2.2';
     }
 
     $footer = rw_jquery_get_footer();

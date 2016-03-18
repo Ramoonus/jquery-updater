@@ -72,6 +72,7 @@ function jqu_db_update()
 
     // Upgrade jQuery 2.2.0 --> 2.2.1
     // @since 2.2.1
+    // @todo tidy up if
     if (version_compare(get_option('jqu_jquery_version'), '2.2.0', '=')) {
         update_option('jqu_db_version', '2.2.1');
     }

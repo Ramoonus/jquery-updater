@@ -20,7 +20,6 @@
     "phpunit/phpunit" : ">=4.8.0",
     "phpdocumentor/phpdocumentor" : "2.*",
     "squizlabs/php_codesniffer" : ">=2.5.0",
-    "pdepend/pdepend" : "2.2.*",
     "scrutinizer/ocular": ">=1.0.0",
     "wp-coding-standards/wpcs": "0.6.*"
   }

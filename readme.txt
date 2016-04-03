@@ -3,7 +3,7 @@ Contributors: Ramoonus
 Donate link: http://www.ramoonus.nl/donate/
 Tags: jquery, jquery ui, jquery mobile
 Requires at least: 4.0
-Tested up to: 4.4
+Tested up to: 4.5
 Stable tag: 2.1.4
 
 This plugin updates jQuery to the latest stable version on your website.

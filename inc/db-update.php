@@ -38,8 +38,8 @@ function jqu_db_install()
         add_option('jqu_jquery_get_footer', 0); // False
 
         // Version Numbers
-        add_option('jqu_jquery_version', '2.2.1');
-        add_option('jqu_jquery_migrate_version', '1.3.0');
+        add_option('jqu_jquery_version', '2.2.4');
+        add_option('jqu_jquery_migrate_version', '1.4.1');
         add_option('jqu_jquery_ui_version', '1.11.4');
         add_option('jqu_qunit_version', '1.21.0');
         add_option('jqu_mobile_version', '1.4.5');
@@ -74,17 +74,13 @@ function jqu_db_update()
     // @since 2.2.1
     // @todo tidy up if
     if (version_compare(get_option('jqu_jquery_version'), '2.2.0', '=')) {
-        update_option('jqu_db_version', '2.2.1');
+        update_option('jqu_db_version', '2.2.4');
     }
     elseif (version_compare(get_option('jqu_jquery_version'), '1.12.0', '=')) {
         update_option('jqu_db_version', '1.12.1');
     }
-    // @since 2.2.2
-    if (version_compare(get_option('jqu_jquery_version'), '2.2.1', '=')) {
-        update_option('jqu_db_version', '2.2.2');
-    }
     elseif (version_compare(get_option('jqu_jquery_version'), '1.12.1', '=')) {
-        update_option('jqu_db_version', '1.12.2');
+        update_option('jqu_db_version', '1.12.4');
     }
 
     /**

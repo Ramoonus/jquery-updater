@@ -26,7 +26,7 @@ function rw_jquery_updater() {
 
     // upon null, use 2.1.4
     if ( !$ver ) {
-        $ver = '2.2.2';
+        $ver = '2.2.4';
     }
 
     $footer = rw_jquery_get_footer();
@@ -79,7 +79,7 @@ function rw_jquery_migrate() {
 
     // upon null, use 1.3.0
     if ( !$ver ) {
-        $ver = '1.3.0';
+        $ver = '1.4.1';
     };
 
     wp_deregister_script( 'jquery-migrate' );
@@ -199,7 +199,6 @@ function jqu_qunit_loader() {
 if ( get_option( 'jqu_qunit' ) ) {
     add_action( 'wp_enqueue_scripts', 'jqu_qunit_loader' );
 }
-
 
 // Cleanup
 unset($suffix);

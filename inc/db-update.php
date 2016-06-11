@@ -18,12 +18,11 @@ function jqu_db_install()
 {
 
     $newoptions = array();
-
     //foreach($newoptions as $option)
 
     // If Version Number does not exists // Fresh Install
     if (!get_option('jqu_db_version')) {
-        add_option('jqu_db_version', '2.2.1'); // Plugin version
+        add_option('jqu_db_version', '3.0.0'); // Plugin version
 
         // Default options:
         add_option('jqu_compat_blockui', 0); // No
@@ -36,13 +35,15 @@ function jqu_db_install()
         add_option('jqu_replace_jquery_ui', 0); // No
         add_option('jqu_include_noconflict', 1); // Yes
         add_option('jqu_jquery_get_footer', 0); // False
-
+        add_option('jqu_slim', 0); // jQuery Slim
+        
         // Version Numbers
-        add_option('jqu_jquery_version', '2.2.4');
-        add_option('jqu_jquery_migrate_version', '1.4.1');
+        add_option('jqu_jquery_version', '3.0.0');
+        add_option('jqu_jquery_migrate_version', '3.0.0');
         add_option('jqu_jquery_ui_version', '1.11.4');
         add_option('jqu_qunit_version', '1.21.0');
         add_option('jqu_mobile_version', '1.4.5');
+
     }
 
     unset $newoptions;
@@ -68,6 +69,13 @@ function jqu_db_update()
      */
     elseif (version_compare(get_option('jqu_db_version'), '2.1.4', '=')) {
         update_option('jqu_db_version', '2.2.0');
+    }
+
+    /**
+     * Upgrade 2.1.4 --> 2.2.0
+     */
+    elseif (version_compare(get_option('jqu_db_version'), '2.2.1', '=')) {
+        update_option('jqu_db_version', '3.0.0');
     }
 
     // Upgrade jQuery 2.2.0 --> 2.2.1

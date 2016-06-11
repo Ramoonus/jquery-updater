@@ -19,14 +19,14 @@ $suffix = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
  *
  * @since 1.0
  * @return void
- * @version 2.2.2
+ * @version 3.0.0
+ * @todo  slim
  */
 function rw_jquery_updater() {
     $ver    = get_option('jqu_jquery_version');
 
-    // upon null, use 2.1.4
     if ( !$ver ) {
-        $ver = '2.2.4';
+        $ver = '3.0.0';
     }
 
     $footer = rw_jquery_get_footer();
@@ -40,6 +40,7 @@ function rw_jquery_updater() {
  *
  * @return boolean
  * @since 3.0.0
+ * @version 1.0.0
  */
 function rw_jquery_get_footer() {
     $footer = get_option('jqu_jquery_get_footer');
@@ -72,14 +73,13 @@ if ( get_option( 'jqu_replace_jquery' ) ) {
  *
  * @since 2.1.4
  * @return void
- * @version 1.2.1
+ * @version 3.0.0
  */
 function rw_jquery_migrate() {
     $ver = $ver = get_option('jqu_jquery_migrate_version');
 
-    // upon null, use 1.3.0
     if ( !$ver ) {
-        $ver = '1.4.1';
+        $ver = '3.0.0';
     };
 
     wp_deregister_script( 'jquery-migrate' );

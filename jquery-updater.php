@@ -24,6 +24,19 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
+ * Check minimum required WordPress version
+ *
+ * @since 3.0
+ * @version 1.0
+ * @return boolean
+ */
+function rw_jqu_minimum_wp_version() {
+	if(version_compare($wp_version, '4.5', '>=' )) {
+        return 1;
+    }
+}
+
+/**
  * Init jQuery (old function)
  * @return void
  * @author Ramon "Ramoonus" van Belzen
@@ -40,10 +53,10 @@ add_action( 'init', 'jqu_init' );
 /**
  * Load front or backend scripts
  * @since 2.1.4
+ * @todo run updater only on activation
  */
 if ( is_admin() ) {
 	/* Back End */
-	/* @todo run updater only on activation */
 	require_once( plugin_dir_path( __FILE__ ) . 'inc/db-updater.php' );
 
 	/* Get options and aliasses */

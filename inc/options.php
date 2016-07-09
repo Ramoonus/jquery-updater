@@ -12,7 +12,6 @@
 function jqu_init_localization() {
 	load_plugin_textdomain( 'jquery_updater', false, basename( dirname( __FILE__ ) ) . '/languages' );
 }
-
 add_action( 'plugins_loaded', 'jqu_init_localization' );
 
 /* generated using http://wpsettingsapi.jeroensormani.com/ WP Settings API Generator */

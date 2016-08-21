@@ -17,15 +17,15 @@
 function jqu_db_install()
 {
 
-    $newoptions = array();
-    //foreach($newoptions as $option)
+    $new_options = array();
+    //foreach($new_options as $option)
 
     // If Version Number does not exists // Fresh Install
     if (!get_option('jqu_db_version')) {
         add_option('jqu_db_version', '3.0.0'); // Plugin version
 
         // Default options:
-        add_option('jqu_compat_blockui', 0); // No
+        add_option('jqu_compatibility_blockui', 0); // No
         add_option('jqu_shortcode', 0); // No
         add_option('jqu_replace_jquery', 1); // Yes
         add_option('jqu_replace_jquery_migrate', 1); // Yes
@@ -46,7 +46,7 @@ function jqu_db_install()
 
     }
 
-    unset $newoptions;
+    unset $new_options;
 }
 
 /**

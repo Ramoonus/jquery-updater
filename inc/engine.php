@@ -17,16 +17,20 @@ $suffix = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
 /**
  * jQuery
  *
- * @since 1.0
+ * @since 1.0.0
  * @return void
- * @version 3.0.0
+ * @version 3.1.0
  * @todo  slim
+ * @todo fallback
  */
 function rw_jquery_updater() {
+    global  $suffix;
+
     $ver    = get_option('jqu_jquery_version');
 
+    // if undefined, load 3.1
     if ( !$ver ) {
-        $ver = '3.0.0';
+        $ver = '3.1.0';
     }
 
     $footer = rw_jquery_get_footer();
@@ -76,6 +80,9 @@ if ( get_option( 'jqu_replace_jquery' ) ) {
  * @version 3.0.0
  */
 function rw_jquery_migrate() {
+
+    global $suffix;
+
     $ver = $ver = get_option('jqu_jquery_migrate_version');
 
     if ( !$ver ) {
@@ -118,6 +125,8 @@ if ( get_option( 'jqu_replace_jquery_login' ) ) {
  * @version 1.4.5
  */
 function jqu_mobile() {
+    global  $suffix;
+
     $ver = get_option(' jqu_mobile_version' );
 
     // JS
@@ -139,6 +148,8 @@ if ( get_option( 'jqu_replace_jquery_mobile' ) ) {
  * @version 1.11.4
  */
 function jqu_jquery_ui() {
+    global $suffix;
+
     $ver = get_option('jqu_jquery_ui_version');
 
     // upon null, use 1.11.4
@@ -183,6 +194,9 @@ if ( get_option( 'jqu_include_noconflict' ) ) {
  * @return void
  */
 function jqu_qunit_loader() {
+
+    global $suffix;
+
     $ver = get_option('jqu_qunit_version');
     // upon null, use latest
     if ( !$ver ) {

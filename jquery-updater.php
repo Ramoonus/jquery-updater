@@ -14,6 +14,8 @@
  GitHub Branch: master
  */
 
+namespace Ramoonus\jQueryUpdater;
+
 /**
  * Security
  * Exit if accessed directly.
@@ -31,9 +33,14 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @return boolean
  */
 function rw_jqu_minimum_wp_version() {
+
+    global $wp_version;
+
 	if(version_compare($wp_version, '4.5', '>=' )) {
         return 1;
     }
+
+    return 0;
 }
 
 /**
@@ -55,19 +62,22 @@ add_action( 'init', 'jqu_init' );
  * @since 2.1.4
  * @todo run updater only on activation
  */
+define('rw_jquery_plugin_dir', plugin_dir_path( __FILE__ ) );
+
+// if is admin
 if ( is_admin() ) {
 	/* Back End */
-	require_once( plugin_dir_path( __FILE__ ) . 'inc/db-updater.php' );
+	include_once( rw_jquery_plugin_dir . 'inc/db-updater.php' );
 
-	/* Get options and aliasses */
-	require_once( plugin_dir_path( __FILE__ ) . 'inc/options.php' );
+	/* Get options and aliases */
+    include_once( rw_jquery_plugin_dir . 'inc/options.php' );
 } else {
 	/* Front End */
-	require_once( plugin_dir_path( __FILE__ ) . 'inc/engine.php' );
+    include_once( rw_jquery_plugin_dir . 'inc/engine.php' );
 }
 /**
- * Always load compat and deprecated
+ * Always load compatibility and deprecated
  * @since 2.1.4
  */
-require_once( plugin_dir_path( __FILE__ ) . 'inc/compatibility.php' );
-require_once( plugin_dir_path( __FILE__ ) . 'inc/deprecated.php' );
+include_once( rw_jquery_plugin_dir . 'inc/compatibility.php' );
+include_once( rw_jquery_plugin_dir . 'inc/deprecated.php' );

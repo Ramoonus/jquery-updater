@@ -27,10 +27,7 @@ function jq_detect_blockui() {
  * @since 2.1.4
  * @return boolean
  */
-if ( get_option( 'jqu_compat_blockui' ) && jq_detect_blockui() ) {
-	/* Deregister */
+if ( get_option( 'jqu_compatibility_blockui' ) && jq_detect_blockui() ) {
 	wp_deregister_script( 'jquery-blockui' );
 	wp_deregister_script( 'blockui' );
-	/* Enqueue */
-
 }

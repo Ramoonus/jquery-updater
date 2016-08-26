@@ -13,6 +13,3 @@ tests/
 .travis.yml
 composer.json
 phpunit.xml
-
-# PHP
-doc/

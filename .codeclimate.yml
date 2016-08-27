@@ -14,6 +14,12 @@ engines:
   csslint:
     enabled: true
 
+ratings:
+  paths:
+  - "**.php"
+  - "**.css"
+  - "**.js"
+
 exclude_paths:
   - vendor/*
   # JS

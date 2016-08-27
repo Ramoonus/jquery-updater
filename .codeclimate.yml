@@ -21,15 +21,15 @@ ratings:
   - "**.js"
 
 exclude_paths:
-  - vendor/*
+  - "vendor/"
   # JS
-  - js/color/*
-  - js/jquery/*
-  - js/migrate/*
-  - js/mobile/*
-  - js/qunit/*
-  - js/ui/
+  - "js/color/"
+  - "js/jquery/"
+  - "js/migrate/"
+  - "js/mobile/"
+  - "js/qunit/"
+  - "js/ui/"
   # CSS
-  - js/mobile/*
-  - js/qunit/*
-  - js/ui/
+  - "js/mobile/"
+  - "js/qunit/"
+  - "js/ui/"

@@ -1,3 +1,13 @@
+engines:
+  phpcodesniffer:
+    enabled: true
+  phpmd:
+    enabled: true
+  eslint:
+    enabled: true
+  csslint:
+    enabled: true
+
 exclude_paths:
   - vendor/*
   # JS

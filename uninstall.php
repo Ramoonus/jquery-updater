@@ -3,7 +3,6 @@
 if ( ! defined( 'WP_UNINSTALL_PLUGIN' ) ) {
 	exit;
 }
-rw_jqu_uninstall();
 
 /**
  * Uninstaller wrapper
@@ -45,3 +44,6 @@ function rw_jqu_uninstall()
 
     return true;
 }
+
+rw_jqu_uninstall();
+

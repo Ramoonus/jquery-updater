@@ -45,4 +45,3 @@ function rw_jqu_uninstall()
 
     return true;
 }
-

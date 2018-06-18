@@ -7,7 +7,6 @@ The development and issue tracker is located here
 [![GitHub license](https://img.shields.io/badge/license-GPLv3-blue.svg)](https://raw.githubusercontent.com/ramoonus/jquery-updater/master/LICENSE)
 
 [![Code Climate](https://codeclimate.com/github/Ramoonus/jQuery-Updater/badges/gpa.svg)](https://codeclimate.com/github/Ramoonus/jQuery-Updater)
-[![Dependency Status](https://gemnasium.com/badges/github.com/Ramoonus/jQuery-Updater.svg)](https://gemnasium.com/github.com/Ramoonus/jQuery-Updater)
 
 
 ## Bug reports ##

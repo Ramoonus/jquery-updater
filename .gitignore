@@ -215,4 +215,12 @@ pip-log.txt
 #Mr Developer
 .mr.developer.cfg
 
+# PhpStorm
 .idea/
+
+# vscode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json

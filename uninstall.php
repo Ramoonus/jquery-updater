@@ -1,14 +1,14 @@
 <?php
 // If uninstall not called from WordPress, then exit.
-if ( ! defined( 'WP_UNINSTALL_PLUGIN' ) ) {
-	exit;
+if (!defined('WP_UNINSTALL_PLUGIN')) {
+    exit;
 }
 
 /**
  * Uninstaller wrapper
  *
  * @since 4.0
- * @todo return on error
+ * @todo return false on error
  * @return bool
  * @version 3.1
  */
@@ -46,4 +46,3 @@ function rw_jqu_uninstall()
 }
 
 rw_jqu_uninstall();
-

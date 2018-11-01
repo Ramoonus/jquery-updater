@@ -11,8 +11,8 @@ function wpj_updater_plugin_settings() {
     // $plugin_settings->debug();
     ?>
     <div class="wrap">
-        <h1><?php echo __('WP jQuery Updater', 'wpj_updater_plugin_settings');?></h1>
-        <p>WP jQuery Updater settings, you're able to enter your own version of jQuery or enter a CDN.</p>
+        <h1><?php echo __('jQuery Updater', 'wpj_updater_plugin_settings');?></h1>
+        <p>jQuery Updater settings, you're able to enter your own version of jQuery or enter a CDN.</p>
 
         <?php if (isset($_GET['settings-updated']) && $_GET['settings-updated'] == 'true'):
             echo '<div id="setting-error-settings_updated" class="updated settings-error">

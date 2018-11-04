@@ -8,6 +8,7 @@ The development and issue tracker is located here
 
 ## Quality Control ##
 [![Code Climate](https://codeclimate.com/github/Ramoonus/jQuery-Updater/badges/gpa.svg)](https://codeclimate.com/github/Ramoonus/jQuery-Updater)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/1a3da28e6d6735fb9437/test_coverage)](https://codeclimate.com/github/Ramoonus/jQuery-Updater/test_coverage)
 
 ## Bug reports ##
 For bugs, issues use the GitHub [issues](https://github.com/Ramoonus/jQuery-Updater/issues) page.

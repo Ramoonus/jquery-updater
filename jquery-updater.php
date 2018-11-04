@@ -22,6 +22,8 @@ namespace Ramoonus\jQueryUpdater;
  * @since 2.1.4
  * @version 1.0.0
  */
+
+// If this file is called directly, abort.
 if (! defined('ABSPATH')) {
     exit();
 }
@@ -88,7 +90,7 @@ define('rw_jquery_plugin_dir', plugin_dir_path(__FILE__));
 // if is admin
 if (is_admin()) {
     /* Back End */
-    include_once (rw_jquery_plugin_dir . 'inc/db-updater.php');
+    include_once (rw_jquery_plugin_dir . 'inc/db-update.php');
 
     /* Get options and aliases */
     include_once (rw_jquery_plugin_dir . 'inc/options.php');
@@ -107,12 +109,38 @@ include_once (rw_jquery_plugin_dir . 'inc/compatibility.php');
 /**
  * Admin Page
  * version 1.0.0
+ * 
+ * @todo load CSS 
  */
 include_once rw_jquery_plugin_dir . 'inc/admin.php';
 
+add_action('admin_head', 'jqu_admin_css');
+function jqu_admin_css() {
+    // wp_enqueue_style($handle);
+}
+
 function jqu_admin_menu()
 {
-    add_management_page('jQuery Updater', 'jQuery Updater', 'administrator', 'wpj-updater-plugin-settings', 'wpj_updater_plugin_settings');
+  //add_management_page( $page_title, $menu_title, $capability, $menu_slug, $function );
+    add_management_page('jQuery Updater', 'jQuery Updater', 'manage_options', 'jqu_plugin_settings-id', 'jqu_plugin_settings');
     add_action('admin_init', 'wpj_updater_plugin_register_settings');
 }
 add_action('admin_menu', 'jqu_admin_menu');
+
+/**
+ * Process Admin Options changes
+ */
+function jqu_plugin_settings() {
+    // jQuery and jQuery Migrate settings
+    register_setting( 'jqu_plugin_settings-id', 'wpj_updater_jquery_url', 'jqu_option_validation' );
+    register_setting( 'jqu_plugin_settings-id', 'wpj_updater_jquery_migrate_url', 'jqu_option_validation' );
+}
+
+/**
+ * Sanitize all options
+ * 
+ * https://codex.wordpress.org/Validating_Sanitizing_and_Escaping_User_Data
+ */ 
+function jqu_option_validation($input) {
+    return sanitize_text_field($input);
+}

@@ -12,7 +12,7 @@ if (!defined('WP_UNINSTALL_PLUGIN')) {
  * @return bool
  * @version 3.1
  */
-function rw_jqu_uninstall()
+function jqu_uninstall()
 {
 
     /**
@@ -45,4 +45,4 @@ function rw_jqu_uninstall()
     return true;
 }
 
-rw_jqu_uninstall();
+jqu_uninstall();

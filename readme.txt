@@ -2,9 +2,10 @@
 Contributors: Ramoonus
 Donate link: http://www.ramoonus.nl/donate/
 Tags: jquery, jquery ui, jquery mobile
-Requires at least: 4.6
-Tested up to: 4.9
-Stable tag: 2.1.4
+Requires at least: 4.9
+Tested up to: 5.0
+Stable tag: 4.0.0
+Requires PHP: 5.6
 
 This plugin updates jQuery to the latest stable version on your website.
 
@@ -30,6 +31,46 @@ A: If you don`t know what you are doing, or what to expect from this plugin: rea
 3. Q: This plugin breaks my site!
 A: Using jQuery version 2 could break your site.
 
+== Description ==
+This plugin updates [jQuery](http://jquery.com/) to the latest official stable version, which is most likely not available within the latest stable release of WordPress.
+Since jQuery 2+ was used in this plugin, making jQuery 1.x obsolete, [jQuery Migrate](http://jquery.com/download/#jquery-migrate-plugin) is also included.
+
+No files are replaced, therefore deactivation of this plugin returns your site to it`s original state.
+
+**Warning**
+
+If you are not familiar with beta testing, bugfixing, javascript or running bleeding edge software it`s **not** recommended.
+I will not provide help on JavaScript and jQuery!
+
+**Reporting problems**
+
+Please post bug reports and request for help on [WordPress.org Support Forums](https://wordpress.org/support/plugin/jquery-updater). I will only provide help on issues caused by the plugin, not on JavaScript and jQuery related matters!
+Please report feature requests and code changes on [GitHub Issues page](https://github.com/Ramoonus/jQuery-Updater/issues)
+
+If you run into any bugs, turning this plugin off will fully deactivate everything.
+
+**Work in Progress**
+
+* Options screen to enable/disable
+* Option to choose a specific jQuery version
+* Automatic cache flushing
+
+For more information on the development visit the plugins [GitHub](https://github.com/Ramoonus/jQuery-Updater/issues)
+
+== Installation ==
+1. Upload `jquery-updater/` to the `/wp-content/plugins/` directory
+2. Activate the plugin through the 'Plugins' menu in WordPress
+3. Sit back and enjoy
+
+== Frequently Asked Questions ==
+1. Q: Do I need this plugin if I`m running the latest version of WordPress on my site?
+A: No
+
+2. Q: Is this plugin compatible with PHP 5.2 / 5.3 / 5.4 / 5.5 / 5.6 or 7 and HHVM?
+A: Yes
+
+3. Q: This plugin breaks my site! How do I fix it?
+A: Using jQuery version 2 could break your site. See the warning on the homepage of this plugin.
 
 == Changelog ==
 = beta =
@@ -37,16 +78,70 @@ A: Using jQuery version 2 could break your site.
 * Added support for CI using Travis
 * Added support for Composer
 * Tested with PHP 5.3-5.6, HHVM, PHP 7
-* Include jQuery 3.0.0
-* Upgrade jQuery  Migrate to work with jQ 3.0.0
+* Include jQuery 3.x
+* Upgrade to jQuery Migrate 3.0.1
+
+= 3.3.1 =
+* Updated [jQuery to 3.3.1](http://blog.jquery.com/2018/01/20/jquery-3-3-1-fixed-dependencies-in-release-tag/)
+
+= 3.3.0 =
+* Updated [jQuery to 3.3.0](http://blog.jquery.com/2018/01/19/jquery-3-3-0-a-fragrant-bouquet-of-deprecations-and-is-that-a-new-feature/)
+
+= 3.2.1 =
+* Updated jQuery to 3.2.1
+
+= 3.2.0 =
+* Updated jQuery to 3.2.0
+* Removed upgrade notice
+
+= 3.1.1 =
+* Updated jQuery to 3.1.1
+
+= 3.1.0 =
+* [Updated jQuery to 3.1.0](https://blog.jquery.com/2016/07/07/jquery-3-1-0-released-no-more-silent-errors/)
+* Updated minimum supported WordPress version to 4.2 (from 4.0)
+* Validated and tested with WordPress version 4.6
+
+= 3.0.0 =
+* [Updated jQuery to 3.0.0](https://blog.jquery.com/2016/06/09/jquery-3-0-final-released/)
+* [Updated jQuery Migrate to 3.0.0]()https://blog.jquery.com/2016/06/09/jquery-3-0-final-released/
+* Updated minimum supported WordPress version to 4.0 (from 3.8)
+
+= 2.2.3 =
+* Updated jQuery to 2.2.4
+* Updated jQuery Migrate to 1.4.1
+
+= 2.2.3 =
+* [Updated jQuery to 2.2.3](http://blog.jquery.com/2016/02/22/jquery-1-12-1-and-2-2-1-released/)
+* Updated Upgrade Notice
+
+= 2.2.2 =
+* [Updated jQuery to 2.2.2](http://blog.jquery.com/2016/02/22/jquery-1-12-1-and-2-2-1-released/)
+* Updated Upgrade Notice
+
+= 2.2.1 =
+* [Updated jQuery to 2.2.1](http://blog.jquery.com/2016/02/22/jquery-1-12-1-and-2-2-1-released/)
+* Updated Readme
+
+== 2.2.0.1 ==
+* Updated jQuery Migrate to 1.3.1
+* Removed unused files
+
+= 2.2.0 =
+* Made the core translation ready
+* [Updated jQuery to 2.2.0](http://blog.jquery.com/2016/01/08/jquery-2-2-and-1-12-released/)
+* Replaced comments with PHPDoc
+* Removed some unused files
 
 = 2.1.4 =
 * Updated jQuery to 2.1.4
+* Updated Readme
 
 = 2.1.3 =
 * Updated jQuery to 2.1.3
 * Fixed a bug with jQuery Migrate not properly loading
 * Updated minimum WordPress version to 3.9
+* Removed some unit testing scripts
 
 = 2.1.1 =
 * Updated jQuery to 2.1.1
@@ -150,7 +245,3 @@ jQuery 2.0 has the same API as jQuery 1.9, but does not support Internet Explore
 
 = 1.0 =
 * First version, uses jQuery 1.5.2 on Googles CDN
-
-== Upgrade Notice == 
-= 2.1.1 = 
-* Updated jQuery to 2.1.1

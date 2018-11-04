@@ -6,4 +6,8 @@
  * @tutorial http://api.jquery.com/jquery.noconflict/
  */
 
-$.noConflict();
+(function( $ ) {
+  $(function() {
+    // More code using $ as alias to jQuery
+  });
+})(jQuery);

@@ -1,26 +1,45 @@
 {
-  "name" : "Ramoonus/jQuery-Updater",
-  "description" : "This plugin updates jQuery to the latest stable version on your website.",
-  "version" : "4.0.0",
-  "authors" : [ {
-    "name" : "Ramoonus",
-    "email" : "github@ramoonus.nl"
-  } ],
-  "keywords" : [ "wordpress", "jquery", "jquery ui", "jquery mobile" ],
-  "minimum-stability" : "stable",
-  "license" : "GPL-3.0",
-  "type" : "wordpress-plugin",
-  "homepage" : "http://www.ramoonus.nl/wordpress/jquery-updater/",
-  "require" : {
-    "php": "^7.0",
-    "wordpress": ">=4.9"
-  },
-  "require-dev" : {
-    "phpunit/phpunit" : "7.*",
-    "phpdocumentor/phpdocumentor" : "2.*",
-    "squizlabs/php_codesniffer" : "3.*",
-    "scrutinizer/ocular": "1.5.*",
-    "wp-coding-standards/wpcs": "0.14.*",
-    "codeclimate/php-test-reporter": "dev-master"
-  }
+	"name" : "Ramoonus/jQuery-Updater",
+	"description" : "jQuery Updater for WordPress: add the latest version of jQuery to your WordPress installation",
+	"version" : "4.0.0",
+	"authors" : [{
+			"name" : "Ramoonus",
+			"email" : "github@ramoonus.nl",
+			"homepage" : "www.ramoonus.nl"
+		}
+	],
+	"keywords" : [
+		"wordpress",
+		"jquery",
+		"jquery ui",
+		"jquery mobile"
+	],
+	"minimum-stability" : "stable",
+	"license" : "GPL-3.0",
+	"type" : "wordpress-plugin",
+	"homepage" : "http://www.ramoonus.nl/wordpress/jquery-updater/",
+	"require" : {
+		"php" : "^5.6",
+		"wordpress" : ">=4.9"
+	},
+	"require-dev" : {
+		"phpunit/phpunit" : "7.*",
+		"phpdocumentor/phpdocumentor" : "2.*",
+		"squizlabs/php_codesniffer" : "3.*",
+		"scrutinizer/ocular" : "1.5.*",
+		"wp-coding-standards/wpcs" : "0.14.*",
+		"codeclimate/php-test-reporter" : "dev-master"
+	},
+	"support" : {
+		"email" : "support@ramoonus/nl",
+		"issues" : "https://github.com/Ramoonus/jQuery-Updater/issues",
+		"forum" : "https://wordpress.org/support/plugin/jquery-updater",
+		"source" : "https://github.com/Ramoonus/jQuery-Updater"
+	},
+	"repositories" : [{
+			"type" : "git",
+			"url" : "https://github.com/Ramoonus/jQuery-Updater.git",
+			"name" : "GitHub"
+		}
+	]
 }

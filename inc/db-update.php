@@ -17,7 +17,6 @@
 function jqu_db_install()
 {
 
-    $new_options = array();
     //foreach($new_options as $option)
 
     // If Version Number does not exists // Fresh Install
@@ -46,7 +45,6 @@ function jqu_db_install()
 
     }
 
-    unset $new_options;
 }
 
 /**

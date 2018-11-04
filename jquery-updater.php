@@ -35,20 +35,20 @@ if (! defined('ABSPATH')) {
  */
 function rw_jqu_minimum_wp_version()
 {
-   
     global $wp_version;
 
     if (version_compare($wp_version, '4.9', '>=')) {
-        add_action( 'admin_notices', 'rw_jqu_minimum_wp_version_notice' );
+        add_action('admin_notices', 'rw_jqu_minimum_wp_version_notice');
     }
 }
-function rw_jqu_minimum_wp_version_notice() {
-    $class = 'notice notice-error';
-    $message = __( 'jQuery Updater has disabled WP jQuery Updater', 'sample-text-domain' );
-    
-    printf( '<div class="%1$s"><p>%2$s</p></div>', esc_attr( $class ), esc_html( $message ) );
-}
 
+function rw_jqu_minimum_wp_version_notice()
+{
+    $class = 'notice notice-error';
+    $message = __('jQuery Updater has disabled WP jQuery Updater', 'sample-text-domain');
+
+    printf('<div class="%1$s"><p>%2$s</p></div>', esc_attr($class), esc_html($message));
+}
 
 /**
  * Translation Loader

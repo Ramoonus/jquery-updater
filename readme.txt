@@ -5,7 +5,7 @@ Tags: jquery, jquery ui, jquery mobile
 Requires at least: 4.9
 Tested up to: 5.0
 Stable tag: 3.3.1
-Requires PHP: 5.6
+Requires PHP: 7.0
 
 This plugin updates jQuery to the latest stable version on your website.
 

@@ -14,7 +14,7 @@ This plugin updates jQuery to the latest stable version on your website.
 
 For bugs, issues and questions use the GitHub [issues](https://github.com/Ramoonus/jQuery-Updater/issues) page
 
-For more about jQuery information visit [jquery.com](http://jquery.com)
+For more about jQuery information visit [jquery.com](https://jquery.com)
 
 == Installation ==
 1. Upload `jquery-updater/` to the `/wp-content/plugins/` directory
@@ -32,8 +32,8 @@ A: If you don`t know what you are doing, or what to expect from this plugin: rea
 A: Using jQuery version 2 could break your site.
 
 == Description ==
-This plugin updates [jQuery](http://jquery.com/) to the latest official stable version, which is most likely not available within the latest stable release of WordPress.
-Since jQuery 2+ was used in this plugin, making jQuery 1.x obsolete, [jQuery Migrate](http://jquery.com/download/#jquery-migrate-plugin) is also included.
+This plugin updates [jQuery](https://jquery.com/) to the latest official stable version, which is most likely not available within the latest stable release of WordPress.
+Since jQuery 2+ was used in this plugin, making jQuery 1.x obsolete, [jQuery Migrate](https://jquery.com/download/#jquery-migrate-plugin) is also included.
 
 No files are replaced, therefore deactivation of this plugin returns your site to it`s original state.
 
